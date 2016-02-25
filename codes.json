@@ -1,2503 +1,2317 @@
 [
-    {
-        "id": "CLOP_PRA_TIC",
-        "terms": [
-            {
-                "term": "brilique"
-            },
-            {
-                "term": "clopidogrel",
-                "excCodes": [
-                    "14LQ.",
-                    "8BG9.",
-                    "8I2K.",
-                    "8I3R.",
-                    "8B6P.",
-                    "8B6P1",
-                    "8I6B.",
-                    "8I72.",
-                    "8B6P100",
-                    "ALLERGY38470NEMIS",
-                    "ALLERGY6681EMIS",
-                    "ALLERGY7351",
-                    "EMISNQCL22",
-                    "G61..",
-                    "G66..",
-                    "U604800",
-                    "U6048",
-                    "ZV14B"
-                ]
-            },
-            {
-                "term": "efient"
-            },
-            {
-                "term": "grepid"
-            },
-            {
-                "term": "plavix",
-                "excCodes": [
-                    "ALLERGY6131",
-                    "ALLERGY6680EMIS"
-                ]
-            },
-            {
-                "term": "prasugrel"
-            },
-            {
-                "term": "ticagrelor"
-            }
+  {
+    "id": "CLOP_PRA_TIC",
+    "terms": [
+      {
+        "term": "brilique"
+      },
+      {
+        "term": "clopidogrel"
+      },
+      {
+        "term": "efient"
+      },
+      {
+        "term": "grepid"
+      },
+      {
+        "term": "plavix"
+      },
+      {
+        "term": "prasugrel"
+      },
+      {
+        "term": "ticagrelor"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "14LQ.",
+          "8BG9.",
+          "8I2K.",
+          "8I3R.",
+          "8B6P.",
+          "8B6P1",
+          "8I6B.",
+          "8I72.",
+          "8B6P100",
+          "G61..",
+          "G66..",
+          "U604800",
+          "U6048",
+          "ZV14B"
         ]
-    },
-    {
-        "id": "ASPIRINRX",
-        "terms": [
-            {
-                "term": "angettes"
-            },
-            {
-                "term": "asasantin",
-                "excCodes": [
-                    "ALLERGY5960",
-                    "ALLERGY6600EMIS",
-                    "G66.."
-                ]
-            },
-            {
-                "term": "aspergum"
-            },
-            {
-                "term": "aspirin",
-                "excCodes": [
-                    "U200.",
-                    "TJ...",
-                    "U1A0.",
-                    "ALLERGY5594",
-                    "8I66.",
-                    "U6051",
-                    "14LZ.",
-                    "661P.",
-                    "T8...",
-                    "T803000",
-                    "9N3..",
-                    "TJ53.",
-                    "T8030",
-                    "14LK.",
-                    "8H6D.",
-                    "ALLERGY",
-                    "9b62.",
-                    "67I8.",
-                    "14L4.",
-                    "14L..",
-                    "SL51000",
-                    "8IHJ.",
-                    "ALLERGY123",
-                    "SL...",
-                    "SL510",
-                    "J16y400",
-                    "9b61.",
-                    "G61..",
-                    "M28..",
-                    "9bJ0.",
-                    "1780.",
-                    "8BG5.",
-                    "8I24.",
-                    "ALLERGY18532NEMIS",
-                    "ALLERGY6413BRIDL",
-                    "43Qd.",
-                    "8B63.",
-                    "EGTONAS2",
-                    "ZV14800",
-                    "EGTONAS1",
-                    "14M5.",
-                    "U605112",
-                    "8I38.",
-                    "9bJ4.",
-                    "G33..",
-                    "DEGRADE_DEGRADE_MED_",
-                    "9b60.",
-                    "ZV148",
-                    "ALLERGY167",
-                    "ALLERGY1945",
-                    "ALLERGY61",
-                    "ALLERGY1179",
-                    "ALLERGY6791",
-                    "8I70.",
-                    "ALLERGY1946",
-                    "Z1Q2200"
-                ]
-            },
-            {
-                "term": "caprin"
-            },
-            {
-                "term": "caspac"
-            },
-            {
-                "term": "claradin"
-            },
-            {
-                "term": "dipyrid%asp"
-            },
-            {
-                "term": "disprin"
-            },
-            {
-                "term": "enprin"
-            },
-            {
-                "term": "flamasacard"
-            },
-            {
-                "term": "imazin"
-            },
-            {
-                "term": "ismn%aspirin"
-            },
-            {
-                "term": "isosorbide%asp"
-            },
-            {
-                "term": "laboprin"
-            },
-            {
-                "term": "levius"
-            },
-            {
-                "term": "micropirin"
-            },
-            {
-                "term": "nu-seals"
-            },
-            {
-                "term": "palaprin"
-            },
-            {
-                "term": "paynocil"
-            },
-            {
-                "term": "platet"
-            },
-            {
-                "term": "solprin"
-            }
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY38470NEMIS",
+          "ALLERGY6681EMIS",
+          "ALLERGY7351",
+          "EMISNQCL22",
+          "ALLERGY6131",
+          "ALLERGY6680EMIS"
         ]
-    },
-    {
-        "id": "DIUR_COD",
-        "terms": [
-            {
-                "term": "aldactone"
-            },
-            {
-                "term": "aluzine"
-            },
-            {
-                "term": "arelix"
-            },
-            {
-                "term": "aridil"
-            },
-            {
-                "term": "betinex"
-            },
-            {
-                "term": "bumetan",
-                "excCodes": [
-                    "ALLERGY265",
-                    "ALLERGY216"
-                ]
-            },
-            {
-                "term": "burinex"
-            },
-            {
-                "term": "co-amilofruse",
-                "excCodes": [
-                    "ALLERGY43650NEMIS",
-                    "TJ..."
-                ]
-            },
-            {
-                "term": "diatensec"
-            },
-            {
-                "term": "diumide"
-            },
-            {
-                "term": "diuresal"
-            },
-            {
-                "term": "dryptal"
-            },
-            {
-                "term": "edecrin"
-            },
-            {
-                "term": "etacrynic"
-            },
-            {
-                "term": "ethacrynic"
-            },
-            {
-                "term": "froop"
-            },
-            {
-                "term": "fru-co"
-            },
-            {
-                "term": "frumax"
-            },
-            {
-                "term": "frumil"
-            },
-            {
-                "term": "frusem",
-                "excCodes": [
-                    "TJE4100",
-                    "66R5.",
-                    "9bJ0.",
-                    "ALLERGY759",
-                    "ALLERGY668"
-                ]
-            },
-            {
-                "term": "frusemide",
-                "excCodes": [
-                    "TJE4100",
-                    "66R5.",
-                    "9bJ0.",
-                    "ALLERGY759",
-                    "ALLERGY668"
-                ]
-            },
-            {
-                "term": "frusene"
-            },
-            {
-                "term": "frusetic"
-            },
-            {
-                "term": "frusid",
-                "excTerms": [
-                    "mefruside"
-                ]
-            },
-            {
-                "term": "frusol "
-            },
-            {
-                "term": "furosemide",
-                "excCodes": [
-                    "U60E411",
-                    "U60E4",
-                    "K05..",
-                    "9bJ0.",
-                    "ALLERGY668"
-                ]
-            },
-            {
-                "term": "inspra"
-            },
-            {
-                "term": "komil"
-            },
-            {
-                "term": "laractone"
-            },
-            {
-                "term": "lasikal"
-            },
-            {
-                "term": "lasilactone"
-            },
-            {
-                "term": "lasix"
-            },
-            {
-                "term": "lasoride",
-                "excCodes": [
-                    "66R5."
-                ]
-            },
-            {
-                "term": "loop%diuretics"
-            },
-            {
-                "term": "metenix"
-            },
-            {
-                "term": "piretanide"
-            },
-            {
-                "term": "rusyde"
-            },
-            {
-                "term": "torasemide",
-                "excCodes": [
-                    "ALLERGY5396"
-                ]
-            },
-            {
-                "term": "torem"
-            },
-            {
-                "term": "xuret"
-            }
+      }
+    ]
+  },
+  {
+    "id": "ASPIRINRX",
+    "terms": [
+      {
+        "term": "angettes"
+      },
+      {
+        "term": "asasantin"
+      },
+      {
+        "term": "aspergum"
+      },
+      {
+        "term": "aspirin"
+      },
+      {
+        "term": "caprin"
+      },
+      {
+        "term": "caspac"
+      },
+      {
+        "term": "claradin"
+      },
+      {
+        "term": "dipyrid%asp"
+      },
+      {
+        "term": "disprin"
+      },
+      {
+        "term": "enprin"
+      },
+      {
+        "term": "flamasacard"
+      },
+      {
+        "term": "imazin"
+      },
+      {
+        "term": "ismn%aspirin"
+      },
+      {
+        "term": "isosorbide%asp"
+      },
+      {
+        "term": "laboprin"
+      },
+      {
+        "term": "levius"
+      },
+      {
+        "term": "micropirin"
+      },
+      {
+        "term": "nu-seals"
+      },
+      {
+        "term": "palaprin"
+      },
+      {
+        "term": "paynocil"
+      },
+      {
+        "term": "platet"
+      },
+      {
+        "term": "solprin"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "G66..",
+          "U200.",
+          "TJ...",
+          "U1A0.",
+          "8I66.",
+          "U6051",
+          "14LZ.",
+          "661P.",
+          "T8...",
+          "T803000",
+          "9N3..",
+          "TJ53.",
+          "T8030",
+          "14LK.",
+          "8H6D.",
+          "9b62.",
+          "67I8.",
+          "14L4.",
+          "14L..",
+          "SL51000",
+          "8IHJ.",
+          "SL...",
+          "SL510",
+          "J16y400",
+          "9b61.",
+          "G61..",
+          "M28..",
+          "9bJ0.",
+          "1780.",
+          "8BG5.",
+          "8I24.",
+          "43Qd.",
+          "8B63.",
+          "ZV14800",
+          "14M5.",
+          "U605112",
+          "8I38.",
+          "9bJ4.",
+          "G33..",
+          "9b60.",
+          "ZV148",
+          "8I70.",
+          "Z1Q2200"
         ]
-    },
-    {
-        "id": "GAST1",
-        "terms": [
-            {
-                "term": "acitak"
-            },
-            {
-                "term": "algitec",
-                "excCodes": [
-                    "ALLERGY"
-                ]
-            },
-            {
-                "term": "axid",
-                "excCodes": [
-                    "k641.",
-                    "ae4c.",
-                    "LAOR101954NEMIS",
-                    "LAOR45103NEMIS",
-                    "ALLERGY29885NEMIS",
-                    "MAEY1724",
-                    "ae4q.",
-                    "k642.",
-                    "ALLERGY33491NEMIS",
-                    "LAPO29886NEMIS"
-                ]
-            },
-            {
-                "term": "cimetidine",
-                "excCodes": [
-                    "ALLERGY354",
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "cimetidne"
-            },
-            {
-                "term": "dyspamet"
-            },
-            {
-                "term": "famotidine"
-            },
-            {
-                "term": "galenamet"
-            },
-            {
-                "term": "gavilast"
-            },
-            {
-                "term": "histac"
-            },
-            {
-                "term": "nizatidine",
-                "excCodes": [
-                    "ALLERGY1042",
-                    "ALLERGY1153"
-                ]
-            },
-            {
-                "term": "pepcid",
-                "excCodes": [
-                    "ALLERGY3440"
-                ]
-            },
-            {
-                "term": "peptimax"
-            },
-            {
-                "term": "phimetin"
-            },
-            {
-                "term": "pylorid",
-                "excCodes": [
-                    "4JZ.."
-                ]
-            },
-            {
-                "term": "raciran"
-            },
-            {
-                "term": "ranitic"
-            },
-            {
-                "term": "ranitidine",
-                "excCodes": [
-                    "ALLERGY",
-                    "J16y400",
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "ranitil"
-            },
-            {
-                "term": "rantec",
-                "excCodes": [
-                    "71310",
-                    "7131000"
-                ]
-            },
-            {
-                "term": "ranzac"
-            },
-            {
-                "term": "tagamet",
-                "excCodes": [
-                    "ALLERGY2907"
-                ]
-            },
-            {
-                "term": "ultec"
-            },
-            {
-                "term": "zaedoc"
-            },
-            {
-                "term": "zantac",
-                "excCodes": [
-                    "J34..",
-                    "TJ...",
-                    "ALLERGY3721",
-                    "ALLERGY4132",
-                    "J16y400"
-                ]
-            },
-            {
-                "term": "zinga"
-            },
-            {
-                "term": "zita"
-            }
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY5960",
+          "ALLERGY6600EMIS",
+          "DEGRADE_DEGRADE_MED_",
+          "ALLERGY167",
+          "ALLERGY1945",
+          "ALLERGY61",
+          "ALLERGY1179",
+          "ALLERGY6791",
+          "EGTONAS2",
+          "EGTONAS1",
+          "ALLERGY18532NEMIS",
+          "ALLERGY6413BRIDL",
+          "ALLERGY123",
+          "ALLERGY",
+          "ALLERGY5594",
+          "ALLERGY1946"
         ]
-    },
-    {
-        "id": "ACEI_COD",
-        "terms": [
-            {
-                "term": "accupro"
-            },
-            {
-                "term": "accuretic"
-            },
-            {
-                "term": "acepril"
-            },
-            {
-                "term": "acezide"
-            },
-            {
-                "term": "amias",
-                "excCodes": [
-                    "ALLERGY5569"
-                ]
-            },
-            {
-                "term": "aprovel"
-            },
-            {
-                "term": "candesartan",
-                "excCodes": [
-                    "14L..",
-                    "ALLERGY6392EMIS",
-                    "ALLERGY6756",
-                    "9G4.."
-                ]
-            },
-            {
-                "term": "capoten",
-                "excCodes": [
-                    "2466."
-                ]
-            },
-            {
-                "term": "capozide"
-            },
-            {
-                "term": "capto-co"
-            },
-            {
-                "term": "captopril",
-                "excCodes": [
-                    "ALLERGY",
-                    "TJC7700",
-                    "TJC77",
-                    "ALLERGY256"
-                ]
-            },
-            {
-                "term": "carace"
-            },
-            {
-                "term": "caralpha"
-            },
-            {
-                "term": "cilazapril"
-            },
-            {
-                "term": "co-zidocapt"
-            },
-            {
-                "term": "coaprovel"
-            },
-            {
-                "term": "coversyl",
-                "excCodes": [
-                    "ALLERGY6268BRIDL",
-                    "ALLERGY12940NEMIS",
-                    "1712."
-                ]
-            },
-            {
-                "term": "cozaar",
-                "excCodes": [
-                    "ALLERGY5634"
-                ]
-            },
-            {
-                "term": "diovan",
-                "excCodes": [
-                    "ALLERGY18414NEMIS"
-                ]
-            },
-            {
-                "term": "ecopace"
-            },
-            {
-                "term": "enalapril",
-                "excCodes": [
-                    "662G.",
-                    "ALLERGY577",
-                    "TJC78",
-                    "66R5.",
-                    "ALLERGY662",
-                    "TJC7800"
-                ]
-            },
-            {
-                "term": "eprosartan",
-                "excCodes": [
-                    "ALLERGY3294NEMIS"
-                ]
-            },
-            {
-                "term": "exforge"
-            },
-            {
-                "term": "ramipril",
-                "excCodes": [
-                    "U60C4",
-                    "ALLERGY",
-                    "TJC79",
-                    "C367.",
-                    "14Om.",
-                    "ALLERGY4414EMIS",
-                    "SN5..",
-                    "TJC7900",
-                    "U60C413",
-                    "9bJ0.",
-                    "ALLERGY4139"
-                ]
-            },
-            {
-                "term": "fosinopril",
-                "excCodes": [
-                    "1832.",
-                    "ALLERGY4504EMIS",
-                    "ALLERGY4309"
-                ]
-            },
-            {
-                "term": "gopten"
-            },
-            {
-                "term": "hypapril"
-            },
-            {
-                "term": "hyteneze"
-            },
-            {
-                "term": "imidapril"
-            },
-            {
-                "term": "innovace"
-            },
-            {
-                "term": "innozide",
-                "excCodes": [
-                    "662G."
-                ]
-            },
-            {
-                "term": "irbesartan",
-                "excCodes": [
-                    "ALLERGY6353EMIS",
-                    "ALLERGY6681"
-                ]
-            },
-            {
-                "term": "kaplon"
-            },
-            {
-                "term": "lisicostad"
-            },
-            {
-                "term": "lisinopril",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY",
-                    "66R5.",
-                    "U60C400",
-                    "U60C414",
-                    "U60C4",
-                    "8B3R.",
-                    "ALLERGY4282EGTON",
-                    "14Q..",
-                    "SN51.",
-                    "M28..",
-                    "ALLERGY18534NEMIS",
-                    "ALLERGY3903"
-                ]
-            },
-            {
-                "term": "lopace"
-            },
-            {
-                "term": "losartan",
-                "excCodes": [
-                    "ALLERGY5599EMIS",
-                    "ALLERGY5635"
-                ]
-            },
-            {
-                "term": "micardis",
-                "excCodes": [
-                    "SN5.."
-                ]
-            },
-            {
-                "term": "moexipril"
-            },
-            {
-                "term": "odrik"
-            },
-            {
-                "term": "olmesartan",
-                "excCodes": [
-                    "ALLERGY27109NEMIS",
-                    "ALLERGY15759NEMIS"
-                ]
-            },
-            {
-                "term": "olmetec"
-            },
-            {
-                "term": "perdix"
-            },
-            {
-                "term": "perindopril",
-                "excCodes": [
-                    "U60C400",
-                    "14L..",
-                    "ALLERGY9239",
-                    "ALLERGY6539",
-                    "SN52.",
-                    "56...",
-                    "8ALLERGY6269BRIDL",
-                    "60...",
-                    "ALLERGY6269BRIDL"
-                ]
-            },
-            {
-                "term": "pralenal"
-            },
-            {
-                "term": "quinapril",
-                "excCodes": [
-                    "ALLERGY4364EGTON",
-                    "ALLERGY4019"
-                ]
-            },
-            {
-                "term": "quinil"
-            },
-            {
-                "term": "ranace"
-            },
-            {
-                "term": "sevikar"
-            },
-            {
-                "term": "staril"
-            },
-            {
-                "term": "tanatril"
-            },
-            {
-                "term": "tarka"
-            },
-            {
-                "term": "telmisartan",
-                "excCodes": [
-                    "ALLERGY1043NEMIS",
-                    "56...",
-                    "ALLERGY7431"
-                ]
-            },
-            {
-                "term": "tensopril"
-            },
-            {
-                "term": "teveten"
-            },
-            {
-                "term": "trandolapril"
-            },
-            {
-                "term": "triapin"
-            },
-            {
-                "term": "tritace"
-            },
-            {
-                "term": "valsartan",
-                "excCodes": [
-                    "ALLERGY6236",
-                    "ALLERGY6109EMIS"
-                ]
-            },
-            {
-                "term": "valsartn"
-            },
-            {
-                "term": "valsrtn"
-            },
-            {
-                "term": "vascace"
-            },
-            {
-                "term": "zestoretic",
-                "excCodes": [
-                    "ALLERGY4449EMIS",
-                    "ALLERGY4200"
-                ]
-            },
-            {
-                "term": "zestril",
-                "excCodes": [
-                    "ALLERGY3902"
-                ]
-            },
-            {
-                "term": "zovencal"
-            }
+      }
+    ]
+  },
+  {
+    "id": "DIUR_COD",
+    "terms": [
+      {
+        "term": "aldactone"
+      },
+      {
+        "term": "aluzine"
+      },
+      {
+        "term": "arelix"
+      },
+      {
+        "term": "aridil"
+      },
+      {
+        "term": "betinex"
+      },
+      {
+        "term": "bumetan"
+      },
+      {
+        "term": "burinex"
+      },
+      {
+        "term": "co-amilofruse"
+      },
+      {
+        "term": "diatensec"
+      },
+      {
+        "term": "diumide"
+      },
+      {
+        "term": "diuresal"
+      },
+      {
+        "term": "dryptal"
+      },
+      {
+        "term": "edecrin"
+      },
+      {
+        "term": "etacrynic"
+      },
+      {
+        "term": "ethacrynic"
+      },
+      {
+        "term": "froop"
+      },
+      {
+        "term": "fru-co"
+      },
+      {
+        "term": "frumax"
+      },
+      {
+        "term": "frumil"
+      },
+      {
+        "term": "frusem"
+      },
+      {
+        "term": "frusemide"
+      },
+      {
+        "term": "frusene"
+      },
+      {
+        "term": "frusetic"
+      },
+      {
+        "term": "frusid",
+        "ignore": [
+          {
+            "type": "term",
+            "values": [
+              "mefruside"
+            ]
+          }
         ]
-    },
-    {
-        "id": "AMIO_COD",
-        "terms": [
-            {
-                "term": "amidox"
-            },
-            {
-                "term": "amiodarone",
-                "excCodes": [
-                    "662J100",
-                    "C02..",
-                    "ALLERGY130",
-                    "44WD.",
-                    "44Wm.",
-                    "F367.",
-                    "ALLERGY89"
-                ]
-            },
-            {
-                "term": "amyben"
-            },
-            {
-                "term": "cordarone"
-            }
+      },
+      {
+        "term": "frusol "
+      },
+      {
+        "term": "furosemide"
+      },
+      {
+        "term": "inspra"
+      },
+      {
+        "term": "komil"
+      },
+      {
+        "term": "laractone"
+      },
+      {
+        "term": "lasikal"
+      },
+      {
+        "term": "lasilactone"
+      },
+      {
+        "term": "lasix"
+      },
+      {
+        "term": "lasoride"
+      },
+      {
+        "term": "loop%diuretics"
+      },
+      {
+        "term": "metenix"
+      },
+      {
+        "term": "piretanide"
+      },
+      {
+        "term": "rusyde"
+      },
+      {
+        "term": "torasemide"
+      },
+      {
+        "term": "torem"
+      },
+      {
+        "term": "xuret"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "66R5.",
+          "U60E411",
+          "U60E4",
+          "K05..",
+          "9bJ0.",
+          "TJE4100",
+          "66R5.",
+          "TJ..."
         ]
-    },
-    {
-        "id": "MET_COD",
-        "terms": [
-            {
-                "term": "emtexate"
-            },
-            {
-                "term": "maxtrex"
-            },
-            {
-                "term": "methotrexate"
-            }
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY265",
+          "ALLERGY216",
+          "ALLERGY5396",
+          "ALLERGY668",
+          "ALLERGY759",
+          "ALLERGY43650NEMIS"
         ]
-    },
-    {
-        "id": "NON_SELECTIVE_BETA",
-        "terms": [
-            {
-                "term": "angilol"
-            },
-            {
-                "term": "apsolol"
-            },
-            {
-                "term": "apsolox"
-            },
-            {
-                "term": "azarga"
-            },
-            {
-                "term": "bedranol"
-            },
-            {
-                "term": "berkolol"
-            },
-            {
-                "term": "beta-cardone"
-            },
-            {
-                "term": "beta-prograne",
-                "excCodes": [
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "betadren"
-            },
-            {
-                "term": "betadur"
-            },
-            {
-                "term": "betagan"
-            },
-            {
-                "term": "betim"
-            },
-            {
-                "term": "blocadren"
-            },
-            {
-                "term": "cardinol"
-            },
-            {
-                "term": "carteolol",
-                "excCodes": [
-                    "ALLERGY275"
-                ]
-            },
-            {
-                "term": "cartrol"
-            },
-            {
-                "term": "carvedilol",
-                "excCodes": [
-                    "8IAT.",
-                    "8I7L."
-                ]
-            },
-            {
-                "term": "co-prenozide"
-            },
-            {
-                "term": "combigan"
-            },
-            {
-                "term": "corgard"
-            },
-            {
-                "term": "corgaretic"
-            },
-            {
-                "term": "cosopt",
-                "excCodes": [
-                    "ALLERGY6743EMIS"
-                ]
-            },
-            {
-                "term": "duotrav"
-            },
-            {
-                "term": "eucardic"
-            },
-            {
-                "term": "ganfort"
-            },
-            {
-                "term": "glau-opt"
-            },
-            {
-                "term": "glaucol"
-            },
-            {
-                "term": "glauline"
-            },
-            {
-                "term": "inderal",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY2732",
-                    "C000.",
-                    "173..",
-                    "66R7.",
-                    "ALLERGY1967"
-                ]
-            },
-            {
-                "term": "inderetic"
-            },
-            {
-                "term": "inderex"
-            },
-            {
-                "term": "labetalol"
-            },
-            {
-                "term": "labrocol"
-            },
-            {
-                "term": "laracor"
-            },
-            {
-                "term": "lasipressin"
-            },
-            {
-                "term": "levobunolol"
-            },
-            {
-                "term": "lopranol"
-            },
-            {
-                "term": "metipranolol"
-            },
-            {
-                "term": "moducren"
-            },
-            {
-                "term": "nadolol",
-                "excCodes": [
-                    "TJC65"
-                ]
-            },
-            {
-                "term": "nyogel"
-            },
-            {
-                "term": "oxprenolol",
-                "excCodes": [
-                    "ALLERGY1085"
-                ]
-            },
-            {
-                "term": "oxyprenix"
-            },
-            {
-                "term": "paritane"
-            },
-            {
-                "term": "penbutolol"
-            },
-            {
-                "term": "pindolol"
-            },
-            {
-                "term": "prestim"
-            },
-            {
-                "term": "probeta"
-            },
-            {
-                "term": "propanix"
-            },
-            {
-                "term": "propatard"
-            },
-            {
-                "term": "propranolol",
-                "excCodes": [
-                    "SLC0200",
-                    "ALLERGY1272",
-                    "TJC60",
-                    "TJC02",
-                    "ALLERGY1397",
-                    "2127.",
-                    "6667.",
-                    "ALLERGYDEGRADE_ALLER",
-                    "9bJ0.",
-                    "TJC0200",
-                    "U60B7"
-                ]
-            },
-            {
-                "term": "rapranol"
-            },
-            {
-                "term": "sloprolol"
-            },
-            {
-                "term": "trasicor"
-            },
-            {
-                "term": "slow-pren"
-            },
-            {
-                "term": "sotacor"
-            },
-            {
-                "term": "sotalol",
-                "excCodes": [
-                    "TJC67",
-                    "G56y500",
-                    "ALLERGY1520",
-                    "TJC6700"
-                ]
-            },
-            {
-                "term": "sotazide"
-            },
-            {
-                "term": "spiroprop"
-            },
-            {
-                "term": "syprol"
-            },
-            {
-                "term": "teoptic"
-            },
-            {
-                "term": "tidomat"
-            },
-            {
-                "term": "timolol",
-                "excCodes": [
-                    "TJC6800",
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "timoptol",
-                "excCodes": [
-                    "TJ..."
-                ]
-            },
-            {
-                "term": "tiopex"
-            },
-            {
-                "term": "tolerzide"
-            },
-            {
-                "term": "trandate"
-            },
-            {
-                "term": "trasicor"
-            },
-            {
-                "term": "trasidrex",
-                "excCodes": [
-                    "2464."
-                ]
-            },
-            {
-                "term": "viskaldix"
-            },
-            {
-                "term": "visken"
-            },
-            {
-                "term": "xalacom"
-            }
+      }
+    ]
+  },
+  {
+    "id": "GAST1",
+    "terms": [
+      {
+        "term": "acitak"
+      },
+      {
+        "term": "algitec"
+      },
+      {
+        "term": "axid"
+      },
+      {
+        "term": "cimetidine"
+      },
+      {
+        "term": "cimetidne"
+      },
+      {
+        "term": "dyspamet"
+      },
+      {
+        "term": "famotidine"
+      },
+      {
+        "term": "galenamet"
+      },
+      {
+        "term": "gavilast"
+      },
+      {
+        "term": "histac"
+      },
+      {
+        "term": "nizatidine"
+      },
+      {
+        "term": "pepcid"
+      },
+      {
+        "term": "peptimax"
+      },
+      {
+        "term": "phimetin"
+      },
+      {
+        "term": "pylorid"
+      },
+      {
+        "term": "raciran"
+      },
+      {
+        "term": "ranitic"
+      },
+      {
+        "term": "ranitidine"
+      },
+      {
+        "term": "ranitil"
+      },
+      {
+        "term": "rantec"
+      },
+      {
+        "term": "ranzac"
+      },
+      {
+        "term": "tagamet"
+      },
+      {
+        "term": "ultec"
+      },
+      {
+        "term": "zaedoc"
+      },
+      {
+        "term": "zantac"
+      },
+      {
+        "term": "zinga"
+      },
+      {
+        "term": "zita"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "k641.",
+          "ae4c.",
+          "ae4q.",
+          "k642.",
+          "9bJ0.",
+          "4JZ..",
+          "J34..",
+          "TJ...",
+          "J16y400",
+          "9bJ0.",
+          "71310",
+          "7131000"
         ]
-    },
-    {
-        "id": "PPI_COD",
-        "terms": [
-            {
-                "term": "emozul"
-            },
-            {
-                "term": "esomeprazole",
-                "excCodes": [
-                    "ALLERGY7624"
-                ]
-            },
-            {
-                "term": "galpharm",
-                "excCodes": [
-                    "di21.",
-                    "g42J."
-                ]
-            },
-            {
-                "term": "omeprazole",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY7624",
-                    "ALLERGY",
-                    "56...",
-                    "J16y400",
-                    "2128.",
-                    "ALLERGY6096",
-                    "G61..",
-                    "9bJ4.",
-                    "9b60.",
-                    "ALLERGY6036BRIDL"
-                ]
-            },
-            {
-                "term": "lansoprazole",
-                "excCodes": [
-                    "ALLERGY5358EMIS",
-                    "K05..",
-                    "TJ...",
-                    "ALLERGY",
-                    "56...",
-                    "9bJ4.",
-                    "ALLERGY5398",
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "losec",
-                "excCodes": [
-                    "J10y412",
-                    "ALLERGY6035BRIDL",
-                    "14L1.",
-                    "8B39.",
-                    "ALLERGY6095"
-                ]
-            },
-            {
-                "term": "mepradec"
-            },
-            {
-                "term": "mezzopram"
-            },
-            {
-                "term": "nexium",
-                "excCodes": [
-                    "ALLERGY7079"
-                ]
-            },
-            {
-                "term": "numark%heartburn"
-            },
-            {
-                "term": "omeran"
-            },
-            {
-                "term": "pantoloc"
-            },
-            {
-                "term": "pantoprazole",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY6114EMIS",
-                    "ALLERGY6246"
-                ]
-            },
-            {
-                "term": "pariet",
-                "excCodes": [
-                    "TJ...",
-                    "J16y400",
-                    "ALLERGY6127",
-                    "H56.."
-                ],
-                "excTerms": [
-                    "parietal"
-                ]
-            },
-            {
-                "term": "protium"
-            },
-            {
-                "term": "rabeprazole",
-                "excCodes": [
-                    "TJ...",
-                    "J16y400",
-                    "ALLERGY7315",
-                    "ALLERGY6690EMIS",
-                    "DEGRADE_DEGRADE_MED_"
-                ]
-            },
-            {
-                "term": "zanprol"
-            },
-            {
-                "term": "zoton",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY5397",
-                    "ALLERGY5357EMIS"
-                ]
-            }
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY",
+          "ALLERGY3721",
+          "ALLERGY4132",
+          "ALLERGY354",
+          "LAOR101954NEMIS",
+          "LAOR45103NEMIS",
+          "ALLERGY29885NEMIS",
+          "MAEY1724",
+          "ALLERGY33491NEMIS",
+          "LAPO29886NEMIS",
+          "ALLERGY",
+          "ALLERGY1042",
+          "ALLERGY1153",
+          "ALLERGY3440",
+          "ALLERGY2907"
         ]
-    },
-    {
-        "id": "WAR_COD",
-        "terms": [
-            {
-                "term": "apixaban"
-            },
-            {
-                "term": "dabigatran",
-                "excCodes": [
-                    "8I7R.",
-                    "8I611",
-                    "8I2o.",
-                    "8IES.",
-                    "8I61100"
-                ]
-            },
-            {
-                "term": "eliquis"
-            },
-            {
-                "term": "marevan"
-            },
-            {
-                "term": "pradaxa"
-            },
-            {
-                "term": "rivaroxaban",
-                "excCodes": [
-                    "44vh."
-                ]
-            },
-            {
-                "term": "warfarin"
-            },
-            {
-                "term": "xarelto"
-            }
+      }
+    ]
+  },
+  {
+    "id": "ACEI_COD",
+    "terms": [
+      {
+        "term": "accupro"
+      },
+      {
+        "term": "accuretic"
+      },
+      {
+        "term": "acepril"
+      },
+      {
+        "term": "acezide"
+      },
+      {
+        "term": "amias"
+      },
+      {
+        "term": "aprovel"
+      },
+      {
+        "term": "candesartan"
+      },
+      {
+        "term": "capoten"
+      },
+      {
+        "term": "capozide"
+      },
+      {
+        "term": "capto-co"
+      },
+      {
+        "term": "captopril"
+      },
+      {
+        "term": "carace"
+      },
+      {
+        "term": "caralpha"
+      },
+      {
+        "term": "cilazapril"
+      },
+      {
+        "term": "co-zidocapt"
+      },
+      {
+        "term": "coaprovel"
+      },
+      {
+        "term": "coversyl"
+      },
+      {
+        "term": "cozaar"
+      },
+      {
+        "term": "diovan"
+      },
+      {
+        "term": "ecopace"
+      },
+      {
+        "term": "enalapril"
+      },
+      {
+        "term": "eprosartan"
+      },
+      {
+        "term": "exforge"
+      },
+      {
+        "term": "ramipril"
+      },
+      {
+        "term": "fosinopril"
+      },
+      {
+        "term": "gopten"
+      },
+      {
+        "term": "hypapril"
+      },
+      {
+        "term": "hyteneze"
+      },
+      {
+        "term": "imidapril"
+      },
+      {
+        "term": "innovace"
+      },
+      {
+        "term": "innozide"
+      },
+      {
+        "term": "irbesartan"
+      },
+      {
+        "term": "kaplon"
+      },
+      {
+        "term": "lisicostad"
+      },
+      {
+        "term": "lisinopril"
+      },
+      {
+        "term": "lopace"
+      },
+      {
+        "term": "losartan"
+      },
+      {
+        "term": "micardis"
+      },
+      {
+        "term": "moexipril"
+      },
+      {
+        "term": "odrik"
+      },
+      {
+        "term": "olmesartan"
+      },
+      {
+        "term": "olmetec"
+      },
+      {
+        "term": "perdix"
+      },
+      {
+        "term": "perindopril"
+      },
+      {
+        "term": "pralenal"
+      },
+      {
+        "term": "quinapril"
+      },
+      {
+        "term": "quinil"
+      },
+      {
+        "term": "ranace"
+      },
+      {
+        "term": "sevikar"
+      },
+      {
+        "term": "staril"
+      },
+      {
+        "term": "tanatril"
+      },
+      {
+        "term": "tarka"
+      },
+      {
+        "term": "telmisartan"
+      },
+      {
+        "term": "tensopril"
+      },
+      {
+        "term": "teveten"
+      },
+      {
+        "term": "trandolapril"
+      },
+      {
+        "term": "triapin"
+      },
+      {
+        "term": "tritace"
+      },
+      {
+        "term": "valsartan"
+      },
+      {
+        "term": "valsartn"
+      },
+      {
+        "term": "valsrtn"
+      },
+      {
+        "term": "vascace"
+      },
+      {
+        "term": "zestoretic"
+      },
+      {
+        "term": "zestril"
+      },
+      {
+        "term": "zovencal"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "14L..",
+          "14Om.",
+          "14Q..",
+          "1712.",
+          "1832.",
+          "2466.",
+          "56...",
+          "60...",
+          "662G.",
+          "66R5.",
+          "8B3R.",
+          "9bJ0.",
+          "9G4..",
+          "C367.",
+          "M28..",
+          "SN5..",
+          "SN51.",
+          "SN52.",
+          "TJ...",
+          "TJC77",
+          "TJC7700",
+          "TJC78",
+          "TJC7800",
+          "TJC79",
+          "TJC7900",
+          "U60C4",
+          "U60C400",
+          "U60C413",
+          "U60C414"
         ]
-    },
-    {
-        "id": "SELECTIVE_BETA",
-        "terms": [
-            {
-                "term": "acebutolol",
-                "excCodes": [
-                    "TJC61"
-                ]
-            },
-            {
-                "term": "antipressan"
-            },
-            {
-                "term": "arbralen"
-            },
-            {
-                "term": "atenix"
-            },
-            {
-                "term": "atenolol",
-                "excCodes": [
-                    "TJC62",
-                    "G870.",
-                    "TJC6200",
-                    "ALLERGY125",
-                    "1737.",
-                    "66R5.",
-                    "U60B715",
-                    "ALLERGY169",
-                    "662E.",
-                    "661F."
-                ]
-            },
-            {
-                "term": "beta-adalat",
-                "excCodes": [
-                    ""
-                ]
-            },
-            {
-                "term": "betaloc"
-            },
-            {
-                "term": "betaxolol"
-            },
-            {
-                "term": "betoptic"
-            },
-            {
-                "term": "bipranix"
-            },
-            {
-                "term": "bisoprolol",
-                "excCodes": [
-                    "8I26.",
-                    "U60B9",
-                    "ALLERGY4237BRID",
-                    "U60B900",
-                    "EMISREQ|ZVu6i",
-                    "8I6i.",
-                    "8I7K.",
-                    "ALLERGY3841",
-                    "G33..",
-                    "8IAS."
-                ]
-            },
-            {
-                "term": "cardicor"
-            },
-            {
-                "term": "celectol",
-                "excCodes": [
-                    "662F."
-                ]
-            },
-            {
-                "term": "celiprolol",
-                "excCodes": [
-                    "ALLERGY4529EMIS"
-                ]
-            },
-            {
-                "term": "co-tenidone"
-            },
-            {
-                "term": "combitens"
-            },
-            {
-                "term": "congescor",
-                "excCodes": [
-                    "ALLERGY23371NEMIS"
-                ]
-            },
-            {
-                "term": "emcor"
-            },
-            {
-                "term": "hypoloc"
-            },
-            {
-                "term": "kalten",
-                "excCodes": [
-                    "ALLERGY2607",
-                    "ALLERGY2898"
-                ]
-            },
-            {
-                "term": "kerlone"
-            },
-            {
-                "term": "lopresor"
-            },
-            {
-                "term": "mepranix"
-            },
-            {
-                "term": "metoprol"
-            },
-            {
-                "term": "metoprolol"
-            },
-            {
-                "term": "metoros"
-            },
-            {
-                "term": "metprolol",
-                "excCodes": [
-                    "1682.",
-                    "8B35.",
-                    "ALLERGY966"
-                ]
-            },
-            {
-                "term": "monocor"
-            },
-            {
-                "term": "monozide"
-            },
-            {
-                "term": "nebilet"
-            },
-            {
-                "term": "nebivolol",
-                "excCodes": [
-                    "ALLERGY8001EMIS",
-                    "ALLERGY7411",
-                    "8IAV."
-                ]
-            },
-            {
-                "term": "practolol"
-            },
-            {
-                "term": "secadrex"
-            },
-            {
-                "term": "sectral"
-            },
-            {
-                "term": "soloc"
-            },
-            {
-                "term": "tenben"
-            },
-            {
-                "term": "tenchlor"
-            },
-            {
-                "term": "tenif"
-            },
-            {
-                "term": "tenoretic",
-                "excCodes": [
-                    "66R5.",
-                    "662D.",
-                    "1B53."
-                ]
-            },
-            {
-                "term": "tenormin"
-            },
-            {
-                "term": "tensomex"
-            },
-            {
-                "term": "totamol"
-            },
-            {
-                "term": "totaretic"
-            },
-            {
-                "term": "vasaten"
-            },
-            {
-                "term": "vivacor"
-            }
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY5569",
+          "8ALLERGY6269BRIDL",
+          "ALLERGY",
+          "ALLERGY1043NEMIS",
+          "ALLERGY12940NEMIS",
+          "ALLERGY15759NEMIS",
+          "ALLERGY18414NEMIS",
+          "ALLERGY18534NEMIS",
+          "ALLERGY256",
+          "ALLERGY27109NEMIS",
+          "ALLERGY3294NEMIS",
+          "ALLERGY3902",
+          "ALLERGY3903",
+          "ALLERGY4019",
+          "ALLERGY4139",
+          "ALLERGY4200",
+          "ALLERGY4282EGTON",
+          "ALLERGY4309",
+          "ALLERGY4364EGTON",
+          "ALLERGY4414EMIS",
+          "ALLERGY4449EMIS",
+          "ALLERGY4504EMIS",
+          "ALLERGY5599EMIS",
+          "ALLERGY5634",
+          "ALLERGY5635",
+          "ALLERGY577",
+          "ALLERGY6109EMIS",
+          "ALLERGY6236",
+          "ALLERGY6268BRIDL",
+          "ALLERGY6269BRIDL",
+          "ALLERGY6353EMIS",
+          "ALLERGY6392EMIS",
+          "ALLERGY6539",
+          "ALLERGY662",
+          "ALLERGY6681",
+          "ALLERGY6756",
+          "ALLERGY7431",
+          "ALLERGY9239"
         ]
-    },
-    {
-        "id": "NSAID_COD",
-        "terms": [
-            {
-                "term": "aceclofenac",
-                "excCodes": [
-                    "ALLERGY5923EMIS",
-                    "ALLERGY5952"
-                ]
-            },
-            {
-                "term": "acemetacin"
-            },
-            {
-                "term": "acoflam"
-            },
-            {
-                "term": "advil"
-            },
-            {
-                "term": "alrheumat"
-            },
-            {
-                "term": "anadin",
-                "excCodes": [
-                    "1Z...",
-                    "TJ57.",
-                    "diaD."
-                ]
-            },
-            {
-                "term": "apsifen"
-            },
-            {
-                "term": "arcoxia",
-                "excCodes": [
-                    "ALLERGY12803NEMIS"
-                ]
-            },
-            {
-                "term": "arthrofen"
-            },
-            {
-                "term": "arthrosin"
-            },
-            {
-                "term": "arthrotec",
-                "excCodes": [
-                    "ALLERGY5013EMIS",
-                    "ALLERGY6072",
-                    "ALLERGY5056",
-                    "ALLERGY6022EMIS",
-                    "TJ..."
-                ]
-            },
-            {
-                "term": "arthroxen"
-            },
-            {
-                "term": "artracin"
-            },
-            {
-                "term": "axorid"
-            },
-            {
-                "term": "azapropazone",
-                "excCodes": [
-                    "ALLERGY69"
-                ]
-            },
-            {
-                "term": "benoral"
-            },
-            {
-                "term": "benorilate"
-            },
-            {
-                "term": "benorylate"
-            },
-            {
-                "term": "berlind"
-            },
-            {
-                "term": "bextra"
-            },
-            {
-                "term": "brexidol"
-            },
-            {
-                "term": "brufen",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY",
-                    "ALLERGY1884",
-                    "ALLERGY2084",
-                    "2128.",
-                    "9bJ4.",
-                    "ALLERGY1301"
-                ]
-            },
-            {
-                "term": "butacote",
-                "excCodes": [
-                    "TJ..."
-                ]
-            },
-            {
-                "term": "butazolidin"
-            },
-            {
-                "term": "butazone",
-                "excCodes": [
-                    "k67y."
-                ]
-            },
-            {
-                "term": "calprofen"
-            },
-            {
-                "term": "care%ibupro"
-            },
-            {
-                "term": "celebrex",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY6937"
-                ]
-            },
-            {
-                "term": "celecoxib",
-                "excCodes": [
-                    "ALLERGY7605",
-                    "ALLERGY4199NEMIS"
-                ]
-            },
-            {
-                "term": "clinoril"
-            },
-            {
-                "term": "closteril"
-            },
-            {
-                "term": "codafen"
-            },
-            {
-                "term": "condrotec"
-            },
-            {
-                "term": "contraflam"
-            },
-            {
-                "term": "cuprofen",
-                "excCodes": [
-                    "ja2R.",
-                    "CUGE4562NEMIS"
-                ]
-            },
-            {
-                "term": "defanac"
-            },
-            {
-                "term": "dexibuprofen"
-            },
-            {
-                "term": "dexketoprofen"
-            },
-            {
-                "term": "dexomon"
-            },
-            {
-                "term": "diclofenac",
-                "excCodes": [
-                    "ALLERGY492",
-                    "TJ...",
-                    "9N...",
-                    "9b61.",
-                    "1D13.",
-                    "9bJ0.",
-                    "9b60.",
-                    "DEGRADE_DEGRADE_MED_",
-                    "DISU25796EMIS",
-                    "DISU883",
-                    "43to.",
-                    "j22G.",
-                    "ALLERGY7428",
-                    "j2oz.",
-                    "ALLERGY1025NEMIS",
-                    "ALLERGY9939",
-                    "U6053",
-                    "ALLERGY",
-                    "ja1Y.",
-                    "DIIN9753BRIDL",
-                    "ja1F.",
-                    "k6d5.",
-                    "ja2y.",
-                    "DIEY22423EMIS",
-                    "DIGE10794NEMIS",
-                    "VOGE30812NEMIS",
-                    "DISU25795EMIS",
-                    "DICU16281NEMIS",
-                    "ALLERGY8040BRIDL",
-                    "ja2w.",
-                    "ALLERGY6416BRIDL",
-                    "TJ56100",
-                    "DIGE25688EMIS",
-                    "j22F.",
-                    "ALLERGY21535NEMIS",
-                    "k6d7.",
-                    "j2oO.",
-                    "TJ561",
-                    "DIGE89384NEMIS",
-                    "DICU34929NEMIS",
-                    "ALLERGY567",
-                    "j22a.",
-                    "DITO6702NEMIS",
-                    "U605315",
-                    "j22b.",
-                    "DIME21536NEMIS",
-                    "j229.",
-                    "mt1z."
-                ]
-            },
-            {
-                "term": "dicloflex"
-            },
-            {
-                "term": "diclomax",
-                "excCodes": [
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "diclotard"
-            },
-            {
-                "term": "diclovol"
-            },
-            {
-                "term": "diclozip"
-            },
-            {
-                "term": "difenor"
-            },
-            {
-                "term": "diflunisal"
-            },
-            {
-                "term": "digenac"
-            },
-            {
-                "term": "dolobid"
-            },
-            {
-                "term": "dysman"
-            },
-            {
-                "term": "ebretin"
-            },
-            {
-                "term": "ebufac"
-            },
-            {
-                "term": "eccoxolac"
-            },
-            {
-                "term": "econac",
-                "excTerms": [
-                    "econacort"
-                ]
-            },
-            {
-                "term": "emflex",
-                "excCodes": [
-                    "66R5."
-                ]
-            },
-            {
-                "term": "etodolac",
-                "excCodes": [
-                    "ALLERGY601",
-                    "ALLERGY687"
-                ]
-            },
-            {
-                "term": "etopan"
-            },
-            {
-                "term": "etoricoxib",
-                "excCodes": [
-                    "ALLERGY12805NEMIS"
-                ]
-            },
-            {
-                "term": "feldene",
-                "excCodes": [
-                    "TJ...",
-                    "ja1B.",
-                    "ja1z.",
-                    "FEGE11333NEMIS",
-                    "j2e7.",
-                    "9bJ0.",
-                    "FESP10451BRIDL",
-                    "ja1y.",
-                    "FESU1152",
-                    "FEGE8756BRIDL",
-                    "ja2P.",
-                    "ALLERGY2317"
-                ]
-            },
-            {
-                "term": "feminax"
-            },
-            {
-                "term": "fenactol",
-                "excCodes": [
-                    "ALLERGY13652NEMIS"
-                ]
-            },
-            {
-                "term": "fenbid",
-                "excCodes": [
-                    "ja2M.",
-                    "ja2N.",
-                    "FEGE29439EMIS",
-                    "ja2X.",
-                    "FEGE190NEMIS",
-                    "ALLERGY2320"
-                ]
-            },
-            {
-                "term": "fenbufen",
-                "excCodes": [
-                    "TJ562",
-                    "TJ56200"
-                ]
-            },
-            {
-                "term": "fenbuzip"
-            },
-            {
-                "term": "fenoket"
-            },
-            {
-                "term": "fenoprofen",
-                "excCodes": [
-                    "TJ563"
-                ]
-            },
-            {
-                "term": "fenopron",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY2579"
-                ]
-            },
-            {
-                "term": "fenpaed"
-            },
-            {
-                "term": "feverfen"
-            },
-            {
-                "term": "flamatak"
-            },
-            {
-                "term": "flamatrol"
-            },
-            {
-                "term": "flamrase"
-            },
-            {
-                "term": "flexin"
-            },
-            {
-                "term": "flexotard"
-            },
-            {
-                "term": "flurbiprofen",
-                "excCodes": [
-                    "k6cz.",
-                    "ALLERGY656",
-                    "ALLERGY6460BRIDL",
-                    "ALLERGY746"
-                ]
-            },
-            {
-                "term": "froben",
-                "excCodes": [
-                    "FRSU1244",
-                    "TJ..."
-                ]
-            },
-            {
-                "term": "galprofen"
-            },
-            {
-                "term": "hedex"
-            },
-            {
-                "term": "ibucalm",
-                "excCodes": [
-                    "ja1U."
-                ]
-            },
-            {
-                "term": "ibular",
-                "excTerms": [
-                    "fibular",
-                    "mandibular",
-                    "vestibular",
-                    "infundibular"
-                ]
-            },
-            {
-                "term": "ibumed"
-            },
-            {
-                "term": "ibumetin"
-            },
-            {
-                "term": "ibuprofen",
-                "excCodes": [
-                    "ja2U.",
-                    "U200.",
-                    "ja1U.",
-                    "ALLERGY51115NEMIS",
-                    "U605200",
-                    "ALLERGY472",
-                    "ALLERGY760",
-                    "IBGE18017EMIS",
-                    "ALLERGY",
-                    "SL...",
-                    "9b61.",
-                    "9bJ0.",
-                    "9bJ4.",
-                    "9b60.",
-                    "DEGRADE_DEGRADE_MED_",
-                    "ja24.",
-                    "IBGE189NEMIS",
-                    "TJ56000",
-                    "TJ560",
-                    "ja1x.",
-                    "ja2z.",
-                    "U60..",
-                    "TJ5..",
-                    "U605211",
-                    "ja2F.",
-                    "SN52.",
-                    "ALLERGY855",
-                    "U6052",
-                    "SL54200"
-                ]
-            },
-            {
-                "term": "imbrilon"
-            },
-            {
-                "term": "indocid",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY2836",
-                    "j29c.",
-                    "INSU1460",
-                    "ALLERGY2554"
-                ]
-            },
-            {
-                "term": "indoflex"
-            },
-            {
-                "term": "indolar"
-            },
-            {
-                "term": "indomax"
-            },
-            {
-                "term": "indometacin"
-            },
-            {
-                "term": "indomethacin",
-                "excCodes": [
-                    "9bJ0.",
-                    "14L..",
-                    "INSU5026",
-                    "ALLERGY867",
-                    "TJ56500",
-                    "j293.",
-                    "ALLERGY772"
-                ]
-            },
-            {
-                "term": "indomod"
-            },
-            {
-                "term": "indotard"
-            },
-            {
-                "term": "inoven"
-            },
-            {
-                "term": "isclofen"
-            },
-            {
-                "term": "isisfen"
-            },
-            {
-                "term": "jomethid"
-            },
-            {
-                "term": "junifen",
-                "excCodes": [
-                    "9bJ0.",
-                    "DEGRADE_DEGRADE_MED_"
-                ]
-            },
-            {
-                "term": "keral",
-                "excTerms": [
-                    "actikeral"
-                ]
-            },
-            {
-                "term": "ketil"
-            },
-            {
-                "term": "ketocid"
-            },
-            {
-                "term": "ketonal"
-            },
-            {
-                "term": "ketoprofen",
-                "excCodes": [
-                    "j2ax.",
-                    "KEGE9597EMIS",
-                    "KEIN9516EMIS",
-                    "j2a3.",
-                    "ja1V.",
-                    "KESU1572",
-                    "KEGE22661NEMIS"
-                ]
-            },
-            {
-                "term": "ketorolac",
-                "excCodes": [
-                    "KEIN9617EMIS",
-                    "k6g1.",
-                    "KEEY28987EMIS",
-                    "o4a1."
-                ]
-            },
-            {
-                "term": "ketotard"
-            },
-            {
-                "term": "ketovail"
-            },
-            {
-                "term": "ketozip"
-            },
-            {
-                "term": "ketpron"
-            },
-            {
-                "term": "larafen"
-            },
-            {
-                "term": "laraflex"
-            },
-            {
-                "term": "larapam",
-                "excCodes": [
-                    "ALLERGY23931NEMIS",
-                    "djif.",
-                    "djig.",
-                    "djih."
-                ]
-            },
-            {
-                "term": "lederfen",
-                "excCodes": [
-                    "TJ5..",
-                    "S572.",
-                    "ALLERGY2964",
-                    "ALLERGY2669"
-                ]
-            },
-            {
-                "term": "librofem"
-            },
-            {
-                "term": "lidifen"
-            },
-            {
-                "term": "lodine",
-                "excCodes": [
-                    "ALLERGY2713",
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "lofensaid"
-            },
-            {
-                "term": "lornoxicam"
-            },
-            {
-                "term": "lumiracoxib"
-            },
-            {
-                "term": "mandafen"
-            },
-            {
-                "term": "maximet"
-            },
-            {
-                "term": "mefenamic",
-                "excCodes": [
-                    "U6053",
-                    "ALLERGY1019",
-                    "ALLERGY912",
-                    "TJ5y100",
-                    "9bJ0.",
-                    "TJ5y1"
-                ]
-            },
-            {
-                "term": "meflam"
-            },
-            {
-                "term": "meloxicam",
-                "excCodes": [
-                    "MESU28879EMIS",
-                    "TJ5..",
-                    "j2n7.",
-                    "ALLERGY5982EMIS",
-                    "j2n1."
-                ]
-            },
-            {
-                "term": "mobic",
-                "excCodes": [
-                    "j2n8.",
-                    "j2n4."
-                ]
-            },
-            {
-                "term": "mobiflex",
-                "excCodes": [
-                    "9bJ0."
-                ]
-            },
-            {
-                "term": "mobilan"
-            },
-            {
-                "term": "motifene"
-            },
-            {
-                "term": "motrin"
-            },
-            {
-                "term": "nabumetone"
-            },
-            {
-                "term": "napratec",
-                "excCodes": [
-                    "ALLERGY4400",
-                    "ALLERGY4561EMIS"
-                ]
-            },
-            {
-                "term": "naprosyn",
-                "excCodes": [
-                    "ALLERGY3228",
-                    "NASU1934",
-                    "ALLERGY2327",
-                    "j2c8.",
-                    "TJ...",
-                    "ALLERGY2911"
-                ]
-            },
-            {
-                "term": "naproxen",
-                "excCodes": [
-                    "j2cz.",
-                    "U605200",
-                    "1A12.",
-                    "ALLERGY",
-                    "TJ567",
-                    "U605216",
-                    "ALLERGY1117",
-                    "NASU10481BRIDL",
-                    "112..",
-                    "ALLERGY1007",
-                    "TJ56700",
-                    "U6052"
-                ]
-            },
-            {
-                "term": "non-steroidal",
-                "excCodes": [
-                    "9b62.",
-                    "J4...",
-                    "TJ56.",
-                    "8I2T.",
-                    "9b61.",
-                    "DEGRADE_EVENT_9417_7",
-                    "ALLERGY10.1.1"
-                ]
-            },
-            {
-                "term": "nurofen",
-                "excCodes": [
-                    "ALLERGY11318NEMIS",
-                    "ALLERGY5831NEMIS",
-                    "ALLERGY14331NEMIS",
-                    "ALLERGY25105NEMIS",
-                    "ALLERGY16137NEMIS",
-                    "ja2Z.",
-                    "9bJ0.",
-                    "9b60.",
-                    "DEGRADE_DEGRADE_MED_",
-                    "ALLERGY6773EMIS",
-                    "ALLERGY19691NEMIS",
-                    "ALLERGY40031NEMIS",
-                    "ja2f.",
-                    "ALLERGY24736NEMIS",
-                    "ALLERGY11315NEMIS",
-                    "9bJ4.",
-                    "ALLERGY8948",
-                    "ALLERGY16139NEMIS"
-                ]
-            },
-            {
-                "term": "nycopren"
-            },
-            {
-                "term": "onsenal"
-            },
-            {
-                "term": "opustan"
-            },
-            {
-                "term": "orbifen"
-            },
-            {
-                "term": "orudis"
-            },
-            {
-                "term": "oruvail",
-                "excCodes": [
-                    "j2aa.",
-                    "ORGE9595EMIS",
-                    "ja1O.",
-                    "9bJ0.",
-                    "ORIN10418HILLI",
-                    "ja1H."
-                ]
-            },
-            {
-                "term": "pardelprin"
-            },
-            {
-                "term": "paxofen"
-            },
-            {
-                "term": "phenylbutazone"
-            },
-            {
-                "term": "piroflam"
-            },
-            {
-                "term": "piroxicam",
-                "excCodes": [
-                    "PIGE8758BRIDL",
-                    "PISP18064EMIS",
-                    "ja1y.",
-                    "TJ56800",
-                    "U605313",
-                    "j2ez."
-                ]
-            },
-            {
-                "term": "pirozip"
-            },
-            {
-                "term": "ponstan",
-                "excCodes": [
-                    "TJ...",
-                    "9b60.",
-                    "TJ5..",
-                    "TJz..",
-                    "ALLERGY3514",
-                    "ALLERGY3168"
-                ]
-            },
-            {
-                "term": "pranoxen"
-            },
-            {
-                "term": "preservex",
-                "excCodes": [
-                    "ALLERGY5951"
-                ]
-            },
-            {
-                "term": "prexige"
-            },
-            {
-                "term": "progesic"
-            },
-            {
-                "term": "prosaid"
-            },
-            {
-                "term": "ramodar"
-            },
-            {
-                "term": "relcofen"
-            },
-            {
-                "term": "relifex",
-                "excCodes": [
-                    "ALLERGY3631"
-                ]
-            },
-            {
-                "term": "rheuflex"
-            },
-            {
-                "term": "rheumacin"
-            },
-            {
-                "term": "rheumox"
-            },
-            {
-                "term": "rhumalgan"
-            },
-            {
-                "term": "rimacid"
-            },
-            {
-                "term": "rimafen"
-            },
-            {
-                "term": "rimoxyn"
-            },
-            {
-                "term": "rofecoxib",
-                "excCodes": [
-                    "ALLERGY7414",
-                    "ALLERGY467NEMIS",
-                    "ALLERGY465NEMIS"
-                ]
-            },
-            {
-                "term": "seractil"
-            },
-            {
-                "term": "slo-indo"
-            },
-            {
-                "term": "slofenac"
-            },
-            {
-                "term": "solpaflex"
-            },
-            {
-                "term": "strefen"
-            },
-            {
-                "term": "streflam"
-            },
-            {
-                "term": "sudafed%dual",
-                "excCodes": [
-                    "dibY."
-                ]
-            },
-            {
-                "term": "sulindac",
-                "excCodes": [
-                    "ALLERGY1423"
-                ]
-            },
-            {
-                "term": "surgam"
-            },
-            {
-                "term": "synflex",
-                "excCodes": [
-                    "ALLERGY3481"
-                ]
-            },
-            {
-                "term": "tenoxicam"
-            },
-            {
-                "term": "tiaprofen"
-            },
-            {
-                "term": "tiloket",
-                "excCodes": [
-                    "ja2Y."
-                ]
-            },
-            {
-                "term": "timpron"
-            },
-            {
-                "term": "tolectin"
-            },
-            {
-                "term": "tolmetin"
-            },
-            {
-                "term": "toradol"
-            },
-            {
-                "term": "valdecoxib"
-            },
-            {
-                "term": "valdic"
-            },
-            {
-                "term": "valenac"
-            },
-            {
-                "term": "valket"
-            },
-            {
-                "term": "valrox"
-            },
-            {
-                "term": "vimovo"
-            },
-            {
-                "term": "vioxx",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY6423",
-                    "ALLERGY471NEMIS",
-                    "ALLERGY11576NEMIS"
-                ]
-            },
-            {
-                "term": "volraman"
-            },
-            {
-                "term": "volsaid",
-                "excCodes": [
-                    "9bJ0.",
-                    "ALLERGY13541NEMIS"
-                ]
-            },
-            {
-                "term": "voltaren"
-            },
-            {
-                "term": "voltarol",
-                "excCodes": [
-                    "ja18.",
-                    "VOSU3063",
-                    "DEGRADE_DEGRADE_MED_",
-                    "9bJ0.",
-                    "ALLERGY",
-                    "TJ...",
-                    "ja1A.",
-                    "j2oz.",
-                    "ja2g.",
-                    "k6d8.",
-                    "ja2m.",
-                    "VOME21146NEMIS",
-                    "H06z000",
-                    "14L..",
-                    "DEGRADE_EVENT_9417_7",
-                    "ja3C.",
-                    "ja2q.",
-                    "j22E.",
-                    "VOSU25792EMIS",
-                    "j223.",
-                    "ja1F.",
-                    "ALLERGY3699",
-                    "VOGE30812NEMIS",
-                    "k6d2.",
-                    "VOIN9170BRIDL",
-                    "ALLERGY3698",
-                    "ja2s.",
-                    "j22D.",
-                    "VOEM10166BRIDL",
-                    "ja3F.",
-                    "VOSU25791EMIS",
-                    "VOGE17488NEMIS",
-                    "j224.",
-                    "j225.",
-                    "ALLERGY4106"
-                ]
-            },
-            {
-                "term": "xefo"
-            }
+      }
+    ]
+  },
+  {
+    "id": "AMIO_COD",
+    "terms": [
+      {
+        "term": "amidox"
+      },
+      {
+        "term": "amiodarone"
+      },
+      {
+        "term": "amyben"
+      },
+      {
+        "term": "cordarone"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "662J100",
+          "C02..",
+          "44WD.",
+          "44Wm.",
+          "F367."
         ]
-    },
-    {
-        "id": "PCR_RCGP_MISOPROSTOL",
-        "terms": [
-            {
-                "term": "cytotec"
-            },
-            {
-                "term": "misoprostol",
-                "excCodes": [
-                    "TJ...",
-                    "ALLERGY3778"
-                ]
-            }
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY130",
+          "ALLERGY89"
         ]
-    }
+      }
+    ]
+  },
+  {
+    "id": "MET_COD",
+    "terms": [
+      {
+        "term": "emtexate"
+      },
+      {
+        "term": "maxtrex"
+      },
+      {
+        "term": "methotrexate"
+      }
+    ]
+  },
+  {
+    "id": "NON_SELECTIVE_BETA",
+    "terms": [
+      {
+        "term": "angilol"
+      },
+      {
+        "term": "apsolol"
+      },
+      {
+        "term": "apsolox"
+      },
+      {
+        "term": "azarga"
+      },
+      {
+        "term": "bedranol"
+      },
+      {
+        "term": "berkolol"
+      },
+      {
+        "term": "beta-cardone"
+      },
+      {
+        "term": "beta-prograne"
+      },
+      {
+        "term": "betadren"
+      },
+      {
+        "term": "betadur"
+      },
+      {
+        "term": "betagan"
+      },
+      {
+        "term": "betim"
+      },
+      {
+        "term": "blocadren"
+      },
+      {
+        "term": "cardinol"
+      },
+      {
+        "term": "carteolol"
+      },
+      {
+        "term": "cartrol"
+      },
+      {
+        "term": "carvedilol"
+      },
+      {
+        "term": "co-prenozide"
+      },
+      {
+        "term": "combigan"
+      },
+      {
+        "term": "corgard"
+      },
+      {
+        "term": "corgaretic"
+      },
+      {
+        "term": "cosopt"
+      },
+      {
+        "term": "duotrav"
+      },
+      {
+        "term": "eucardic"
+      },
+      {
+        "term": "ganfort"
+      },
+      {
+        "term": "glau-opt"
+      },
+      {
+        "term": "glaucol"
+      },
+      {
+        "term": "glauline"
+      },
+      {
+        "term": "inderal"
+      },
+      {
+        "term": "inderetic"
+      },
+      {
+        "term": "inderex"
+      },
+      {
+        "term": "labetalol"
+      },
+      {
+        "term": "labrocol"
+      },
+      {
+        "term": "laracor"
+      },
+      {
+        "term": "lasipressin"
+      },
+      {
+        "term": "levobunolol"
+      },
+      {
+        "term": "lopranol"
+      },
+      {
+        "term": "metipranolol"
+      },
+      {
+        "term": "moducren"
+      },
+      {
+        "term": "nadolol"
+      },
+      {
+        "term": "nyogel"
+      },
+      {
+        "term": "oxprenolol"
+      },
+      {
+        "term": "oxyprenix"
+      },
+      {
+        "term": "paritane"
+      },
+      {
+        "term": "penbutolol"
+      },
+      {
+        "term": "pindolol"
+      },
+      {
+        "term": "prestim"
+      },
+      {
+        "term": "probeta"
+      },
+      {
+        "term": "propanix"
+      },
+      {
+        "term": "propatard"
+      },
+      {
+        "term": "propranolol"
+      },
+      {
+        "term": "rapranol"
+      },
+      {
+        "term": "sloprolol"
+      },
+      {
+        "term": "trasicor"
+      },
+      {
+        "term": "slow-pren"
+      },
+      {
+        "term": "sotacor"
+      },
+      {
+        "term": "sotalol"
+      },
+      {
+        "term": "sotazide"
+      },
+      {
+        "term": "spiroprop"
+      },
+      {
+        "term": "syprol"
+      },
+      {
+        "term": "teoptic"
+      },
+      {
+        "term": "tidomat"
+      },
+      {
+        "term": "timolol"
+      },
+      {
+        "term": "timoptol"
+      },
+      {
+        "term": "tiopex"
+      },
+      {
+        "term": "tolerzide"
+      },
+      {
+        "term": "trandate"
+      },
+      {
+        "term": "trasicor"
+      },
+      {
+        "term": "trasidrex"
+      },
+      {
+        "term": "viskaldix"
+      },
+      {
+        "term": "visken"
+      },
+      {
+        "term": "xalacom"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "9bJ0.",
+          "8IAT.",
+          "8I7L.",
+          "TJ...",
+          "C000.",
+          "173..",
+          "66R7.",
+          "TJC65",
+          "SLC0200",
+          "TJC60",
+          "TJC02",
+          "2127.",
+          "6667.",
+          "9bJ0.",
+          "TJC0200",
+          "U60B7",
+          "TJC67",
+          "G56y500",
+          "TJC6700",
+          "TJC6800",
+          "9bJ0.",
+          "TJ...",
+          "2464."
+        ]
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY275",
+          "ALLERGY6743EMIS",
+          "ALLERGY2732",
+          "ALLERGY1967",
+          "ALLERGY1085",
+          "ALLERGY1272",
+          "ALLERGY1397",
+          "ALLERGYDEGRADE_ALLER",
+          "ALLERGY1520"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PPI_COD",
+    "terms": [
+      {
+        "term": "emozul"
+      },
+      {
+        "term": "esomeprazole"
+      },
+      {
+        "term": "galpharm"
+      },
+      {
+        "term": "omeprazole"
+      },
+      {
+        "term": "lansoprazole"
+      },
+      {
+        "term": "losec"
+      },
+      {
+        "term": "mepradec"
+      },
+      {
+        "term": "mezzopram"
+      },
+      {
+        "term": "nexium"
+      },
+      {
+        "term": "numark%heartburn"
+      },
+      {
+        "term": "omeran"
+      },
+      {
+        "term": "pantoloc"
+      },
+      {
+        "term": "pantoprazole"
+      },
+      {
+        "term": "pariet",
+        "ignore": [
+          {
+            "type": "term",
+            "values": [
+              "parietal"
+            ]
+          }
+        ]
+      },
+      {
+        "term": "protium"
+      },
+      {
+        "term": "rabeprazole"
+      },
+      {
+        "term": "zanprol"
+      },
+      {
+        "term": "zoton"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "di21.",
+          "g42J.",
+          "TJ...",
+          "56...",
+          "J16y400",
+          "2128.",
+          "G61..",
+          "9bJ4.",
+          "9b60.",
+          "K05..",
+          "TJ...",
+          "56...",
+          "9bJ4.",
+          "9bJ0.",
+          "J10y412",
+          "14L1.",
+          "8B39.",
+          "TJ...",
+          "TJ...",
+          "J16y400",
+          "H56..",
+          "TJ...",
+          "J16y400"
+        ]
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY7624",
+          "ALLERGY7624",
+          "ALLERGY",
+          "ALLERGY6096",
+          "ALLERGY6036BRIDL",
+          "ALLERGY5358EMIS",
+          "ALLERGY5398",
+          "ALLERGY6035BRIDL",
+          "ALLERGY6095",
+          "ALLERGY7079",
+          "ALLERGY",
+          "ALLERGY6114EMIS",
+          "ALLERGY6246",
+          "ALLERGY6127",
+          "ALLERGY7315",
+          "ALLERGY6690EMIS",
+          "DEGRADE_DEGRADE_MED_",
+          "ALLERGY5397",
+          "ALLERGY5357EMIS"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "WAR_COD",
+    "terms": [
+      {
+        "term": "apixaban"
+      },
+      {
+        "term": "dabigatran"
+      },
+      {
+        "term": "eliquis"
+      },
+      {
+        "term": "marevan"
+      },
+      {
+        "term": "pradaxa"
+      },
+      {
+        "term": "rivaroxaban"
+      },
+      {
+        "term": "warfarin"
+      },
+      {
+        "term": "xarelto"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "8I7R.",
+          "8I611",
+          "8I2o.",
+          "8IES.",
+          "8I61100",
+          "44vh."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SELECTIVE_BETA",
+    "terms": [
+      {
+        "term": "acebutolol"
+      },
+      {
+        "term": "antipressan"
+      },
+      {
+        "term": "arbralen"
+      },
+      {
+        "term": "atenix"
+      },
+      {
+        "term": "atenolol"
+      },
+      {
+        "term": "beta-adalat"
+      },
+      {
+        "term": "betaloc"
+      },
+      {
+        "term": "betaxolol"
+      },
+      {
+        "term": "betoptic"
+      },
+      {
+        "term": "bipranix"
+      },
+      {
+        "term": "bisoprolol"
+      },
+      {
+        "term": "cardicor"
+      },
+      {
+        "term": "celectol"
+      },
+      {
+        "term": "celiprolol"
+      },
+      {
+        "term": "co-tenidone"
+      },
+      {
+        "term": "combitens"
+      },
+      {
+        "term": "congescor"
+      },
+      {
+        "term": "emcor"
+      },
+      {
+        "term": "hypoloc"
+      },
+      {
+        "term": "kalten"
+      },
+      {
+        "term": "kerlone"
+      },
+      {
+        "term": "lopresor"
+      },
+      {
+        "term": "mepranix"
+      },
+      {
+        "term": "metoprol"
+      },
+      {
+        "term": "metoprolol"
+      },
+      {
+        "term": "metoros"
+      },
+      {
+        "term": "metprolol"
+      },
+      {
+        "term": "monocor"
+      },
+      {
+        "term": "monozide"
+      },
+      {
+        "term": "nebilet"
+      },
+      {
+        "term": "nebivolol"
+      },
+      {
+        "term": "practolol"
+      },
+      {
+        "term": "secadrex"
+      },
+      {
+        "term": "sectral"
+      },
+      {
+        "term": "soloc"
+      },
+      {
+        "term": "tenben"
+      },
+      {
+        "term": "tenchlor"
+      },
+      {
+        "term": "tenif"
+      },
+      {
+        "term": "tenoretic"
+      },
+      {
+        "term": "tenormin"
+      },
+      {
+        "term": "tensomex"
+      },
+      {
+        "term": "totamol"
+      },
+      {
+        "term": "totaretic"
+      },
+      {
+        "term": "vasaten"
+      },
+      {
+        "term": "vivacor"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "TJC61",
+          "TJC62",
+          "G870.",
+          "TJC6200",
+          "1737.",
+          "66R5.",
+          "U60B715",
+          "662E.",
+          "661F.",
+          "8I26.",
+          "U60B9",
+          "U60B900",
+          "8I6i.",
+          "8I7K.",
+          "G33..",
+          "8IAS.",
+          "662F.",
+          "1682.",
+          "8B35.",
+          "8IAV.",
+          "66R5.",
+          "662D.",
+          "1B53."
+        ]
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY125",
+          "ALLERGY169",
+          "ALLERGY4237BRID",
+          "EMISREQ|ZVu6i",
+          "ALLERGY3841",
+          "ALLERGY4529EMIS",
+          "ALLERGY23371NEMIS",
+          "ALLERGY2607",
+          "ALLERGY2898",
+          "ALLERGY966",
+          "ALLERGY8001EMIS",
+          "ALLERGY7411"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "NSAID_COD",
+    "terms": [
+      {
+        "term": "aceclofenac"
+      },
+      {
+        "term": "acemetacin"
+      },
+      {
+        "term": "acoflam"
+      },
+      {
+        "term": "advil"
+      },
+      {
+        "term": "alrheumat"
+      },
+      {
+        "term": "anadin"
+      },
+      {
+        "term": "apsifen"
+      },
+      {
+        "term": "arcoxia"
+      },
+      {
+        "term": "arthrofen"
+      },
+      {
+        "term": "arthrosin"
+      },
+      {
+        "term": "arthrotec"
+      },
+      {
+        "term": "arthroxen"
+      },
+      {
+        "term": "artracin"
+      },
+      {
+        "term": "axorid"
+      },
+      {
+        "term": "azapropazone"
+      },
+      {
+        "term": "benoral"
+      },
+      {
+        "term": "benorilate"
+      },
+      {
+        "term": "benorylate"
+      },
+      {
+        "term": "berlind"
+      },
+      {
+        "term": "bextra"
+      },
+      {
+        "term": "brexidol"
+      },
+      {
+        "term": "brufen"
+      },
+      {
+        "term": "butacote"
+      },
+      {
+        "term": "butazolidin"
+      },
+      {
+        "term": "butazone"
+      },
+      {
+        "term": "calprofen"
+      },
+      {
+        "term": "care%ibupro"
+      },
+      {
+        "term": "celebrex"
+      },
+      {
+        "term": "celecoxib"
+      },
+      {
+        "term": "clinoril"
+      },
+      {
+        "term": "closteril"
+      },
+      {
+        "term": "codafen"
+      },
+      {
+        "term": "condrotec"
+      },
+      {
+        "term": "contraflam"
+      },
+      {
+        "term": "cuprofen"
+      },
+      {
+        "term": "defanac"
+      },
+      {
+        "term": "dexibuprofen"
+      },
+      {
+        "term": "dexketoprofen"
+      },
+      {
+        "term": "dexomon"
+      },
+      {
+        "term": "diclofenac"
+      },
+      {
+        "term": "dicloflex"
+      },
+      {
+        "term": "diclomax"
+      },
+      {
+        "term": "diclotard"
+      },
+      {
+        "term": "diclovol"
+      },
+      {
+        "term": "diclozip"
+      },
+      {
+        "term": "difenor"
+      },
+      {
+        "term": "diflunisal"
+      },
+      {
+        "term": "digenac"
+      },
+      {
+        "term": "dolobid"
+      },
+      {
+        "term": "dysman"
+      },
+      {
+        "term": "ebretin"
+      },
+      {
+        "term": "ebufac"
+      },
+      {
+        "term": "eccoxolac"
+      },
+      {
+        "term": "econac",
+        "ignore": [
+          {
+            "type": "term",
+            "values": [
+              "econacort"
+            ]
+          }
+        ]
+      },
+      {
+        "term": "emflex"
+      },
+      {
+        "term": "etodolac"
+      },
+      {
+        "term": "etopan"
+      },
+      {
+        "term": "etoricoxib"
+      },
+      {
+        "term": "feldene"
+      },
+      {
+        "term": "feminax"
+      },
+      {
+        "term": "fenactol"
+      },
+      {
+        "term": "fenbid"
+      },
+      {
+        "term": "fenbufen"
+      },
+      {
+        "term": "fenbuzip"
+      },
+      {
+        "term": "fenoket"
+      },
+      {
+        "term": "fenoprofen"
+      },
+      {
+        "term": "fenopron"
+      },
+      {
+        "term": "fenpaed"
+      },
+      {
+        "term": "feverfen"
+      },
+      {
+        "term": "flamatak"
+      },
+      {
+        "term": "flamatrol"
+      },
+      {
+        "term": "flamrase"
+      },
+      {
+        "term": "flexin"
+      },
+      {
+        "term": "flexotard"
+      },
+      {
+        "term": "flurbiprofen"
+      },
+      {
+        "term": "froben"
+      },
+      {
+        "term": "galprofen"
+      },
+      {
+        "term": "hedex"
+      },
+      {
+        "term": "ibucalm"
+      },
+      {
+        "term": "ibular",
+        "ignore": [
+          {
+            "type": "term",
+            "values": [
+              "fibular",
+              "mandibular",
+              "vestibular",
+              "infundibular"
+            ]
+          }
+        ]
+      },
+      {
+        "term": "ibumed"
+      },
+      {
+        "term": "ibumetin"
+      },
+      {
+        "term": "ibuprofen"
+      },
+      {
+        "term": "imbrilon"
+      },
+      {
+        "term": "indocid"
+      },
+      {
+        "term": "indoflex"
+      },
+      {
+        "term": "indolar"
+      },
+      {
+        "term": "indomax"
+      },
+      {
+        "term": "indometacin"
+      },
+      {
+        "term": "indomethacin"
+      },
+      {
+        "term": "indomod"
+      },
+      {
+        "term": "indotard"
+      },
+      {
+        "term": "inoven"
+      },
+      {
+        "term": "isclofen"
+      },
+      {
+        "term": "isisfen"
+      },
+      {
+        "term": "jomethid"
+      },
+      {
+        "term": "junifen"
+      },
+      {
+        "term": "keral",
+        "ignore": [
+          {
+            "type": "term",
+            "values": [
+              "actikeral"
+            ]
+          }
+        ]
+      },
+      {
+        "term": "ketil"
+      },
+      {
+        "term": "ketocid"
+      },
+      {
+        "term": "ketonal"
+      },
+      {
+        "term": "ketoprofen"
+      },
+      {
+        "term": "ketorolac"
+      },
+      {
+        "term": "ketotard"
+      },
+      {
+        "term": "ketovail"
+      },
+      {
+        "term": "ketozip"
+      },
+      {
+        "term": "ketpron"
+      },
+      {
+        "term": "larafen"
+      },
+      {
+        "term": "laraflex"
+      },
+      {
+        "term": "larapam"
+      },
+      {
+        "term": "lederfen"
+      },
+      {
+        "term": "librofem"
+      },
+      {
+        "term": "lidifen"
+      },
+      {
+        "term": "lodine"
+      },
+      {
+        "term": "lofensaid"
+      },
+      {
+        "term": "lornoxicam"
+      },
+      {
+        "term": "lumiracoxib"
+      },
+      {
+        "term": "mandafen"
+      },
+      {
+        "term": "maximet"
+      },
+      {
+        "term": "mefenamic"
+      },
+      {
+        "term": "meflam"
+      },
+      {
+        "term": "meloxicam"
+      },
+      {
+        "term": "mobic"
+      },
+      {
+        "term": "mobiflex"
+      },
+      {
+        "term": "mobilan"
+      },
+      {
+        "term": "motifene"
+      },
+      {
+        "term": "motrin"
+      },
+      {
+        "term": "nabumetone"
+      },
+      {
+        "term": "napratec"
+      },
+      {
+        "term": "naprosyn"
+      },
+      {
+        "term": "naproxen"
+      },
+      {
+        "term": "non-steroidal"
+      },
+      {
+        "term": "nurofen"
+      },
+      {
+        "term": "nycopren"
+      },
+      {
+        "term": "onsenal"
+      },
+      {
+        "term": "opustan"
+      },
+      {
+        "term": "orbifen"
+      },
+      {
+        "term": "orudis"
+      },
+      {
+        "term": "oruvail"
+      },
+      {
+        "term": "pardelprin"
+      },
+      {
+        "term": "paxofen"
+      },
+      {
+        "term": "phenylbutazone"
+      },
+      {
+        "term": "piroflam"
+      },
+      {
+        "term": "piroxicam"
+      },
+      {
+        "term": "pirozip"
+      },
+      {
+        "term": "ponstan"
+      },
+      {
+        "term": "pranoxen"
+      },
+      {
+        "term": "preservex"
+      },
+      {
+        "term": "prexige"
+      },
+      {
+        "term": "progesic"
+      },
+      {
+        "term": "prosaid"
+      },
+      {
+        "term": "ramodar"
+      },
+      {
+        "term": "relcofen"
+      },
+      {
+        "term": "relifex"
+      },
+      {
+        "term": "rheuflex"
+      },
+      {
+        "term": "rheumacin"
+      },
+      {
+        "term": "rheumox"
+      },
+      {
+        "term": "rhumalgan"
+      },
+      {
+        "term": "rimacid"
+      },
+      {
+        "term": "rimafen"
+      },
+      {
+        "term": "rimoxyn"
+      },
+      {
+        "term": "rofecoxib"
+      },
+      {
+        "term": "seractil"
+      },
+      {
+        "term": "slo-indo"
+      },
+      {
+        "term": "slofenac"
+      },
+      {
+        "term": "solpaflex"
+      },
+      {
+        "term": "strefen"
+      },
+      {
+        "term": "streflam"
+      },
+      {
+        "term": "sudafed%dual"
+      },
+      {
+        "term": "sulindac"
+      },
+      {
+        "term": "surgam"
+      },
+      {
+        "term": "synflex"
+      },
+      {
+        "term": "tenoxicam"
+      },
+      {
+        "term": "tiaprofen"
+      },
+      {
+        "term": "tiloket"
+      },
+      {
+        "term": "timpron"
+      },
+      {
+        "term": "tolectin"
+      },
+      {
+        "term": "tolmetin"
+      },
+      {
+        "term": "toradol"
+      },
+      {
+        "term": "valdecoxib"
+      },
+      {
+        "term": "valdic"
+      },
+      {
+        "term": "valenac"
+      },
+      {
+        "term": "valket"
+      },
+      {
+        "term": "valrox"
+      },
+      {
+        "term": "vimovo"
+      },
+      {
+        "term": "vioxx"
+      },
+      {
+        "term": "volraman"
+      },
+      {
+        "term": "volsaid"
+      },
+      {
+        "term": "voltaren"
+      },
+      {
+        "term": "voltarol"
+      },
+      {
+        "term": "xefo"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "112..",
+          "14L..",
+          "1A12.",
+          "1D13.",
+          "1Z...",
+          "2128.",
+          "43to.",
+          "66R5.",
+          "8I2T.",
+          "9b60.",
+          "9b61.",
+          "9b62.",
+          "9bJ0.",
+          "9bJ4.",
+          "9N...",
+          "diaD.",
+          "dibY.",
+          "djif.",
+          "djig.",
+          "djih.",
+          "H06z000",
+          "j223.",
+          "j224.",
+          "j225.",
+          "j229.",
+          "j22a.",
+          "j22b.",
+          "j22D.",
+          "j22E.",
+          "j22F.",
+          "j22G.",
+          "j293.",
+          "j29c.",
+          "j2a3.",
+          "j2aa.",
+          "j2ax.",
+          "j2c8.",
+          "j2cz.",
+          "j2e7.",
+          "j2ez.",
+          "j2n1.",
+          "j2n4.",
+          "j2n7.",
+          "j2n8.",
+          "j2oO.",
+          "j2oz.",
+          "J4...",
+          "ja18.",
+          "ja1A.",
+          "ja1B.",
+          "ja1F.",
+          "ja1H.",
+          "ja1O.",
+          "ja1U.",
+          "ja1V.",
+          "ja1x.",
+          "ja1y.",
+          "ja1z.",
+          "ja24.",
+          "ja2f.",
+          "ja2g.",
+          "ja2m.",
+          "ja2N.",
+          "ja2P.",
+          "ja2q.",
+          "ja2R.",
+          "ja2s.",
+          "ja2U.",
+          "ja2w.",
+          "ja2X.",
+          "ja2y.",
+          "ja2z.",
+          "ja3C.",
+          "ja3F.",
+          "k67y.",
+          "k6cz.",
+          "k6d2.",
+          "k6d5.",
+          "k6d7.",
+          "k6d8.",
+          "k6g1.",
+          "mt1z.",
+          "o4a1.",
+          "S572.",
+          "SL...",
+          "SL54200",
+          "SN52.",
+          "TJ...",
+          "TJ5..",
+          "TJ56.",
+          "TJ560",
+          "TJ56000",
+          "TJ561",
+          "TJ56100",
+          "TJ562",
+          "TJ56200",
+          "TJ563",
+          "TJ56500",
+          "TJ567",
+          "TJ56700",
+          "TJ56800",
+          "TJ57.",
+          "TJ5y1",
+          "TJ5y100",
+          "TJz..",
+          "U200.",
+          "U60..",
+          "U6052",
+          "U605200",
+          "U605211",
+          "U605216",
+          "U6053",
+          "U605313",
+          "U605315"
+        ]
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "DICU16281NEMIS",
+          "DICU34929NEMIS",
+          "DIEY22423EMIS",
+          "DIGE10794NEMIS",
+          "DIGE25688EMIS",
+          "DIGE89384NEMIS",
+          "DIIN9753BRIDL",
+          "DIME21536NEMIS",
+          "DISU25795EMIS",
+          "DISU25796EMIS",
+          "DISU883",
+          "DITO6702NEMIS",
+          "FEGE11333NEMIS",
+          "FEGE190NEMIS",
+          "FEGE29439EMIS",
+          "FEGE8756BRIDL",
+          "FESP10451BRIDL",
+          "FESU1152",
+          "FRSU1244",
+          "IBGE18017EMIS",
+          "IBGE189NEMIS",
+          "INSU1460",
+          "INSU5026",
+          "KEEY28987EMIS",
+          "KEGE22661NEMIS",
+          "KEGE9597EMIS",
+          "KEIN9516EMIS",
+          "KEIN9617EMIS",
+          "KESU1572",
+          "MESU28879EMIS",
+          "NASU10481BRIDL",
+          "NASU1934",
+          "ORGE9595EMIS",
+          "ORIN10418HILLI",
+          "PIGE8758BRIDL",
+          "PISP18064EMIS",
+          "VOEM10166BRIDL",
+          "VOGE17488NEMIS",
+          "VOGE30812NEMIS",
+          "VOIN9170BRIDL",
+          "VOME21146NEMIS",
+          "VOSU25791EMIS",
+          "VOSU25792EMIS",
+          "VOSU3063",
+          "ALLERGY",
+          "ALLERGY10.1.1",
+          "ALLERGY1007",
+          "ALLERGY1019",
+          "ALLERGY1025NEMIS",
+          "ALLERGY1117",
+          "ALLERGY11315NEMIS",
+          "ALLERGY11318NEMIS",
+          "ALLERGY11576NEMIS",
+          "ALLERGY12803NEMIS",
+          "ALLERGY12805NEMIS",
+          "ALLERGY1301",
+          "ALLERGY13541NEMIS",
+          "ALLERGY13652NEMIS",
+          "ALLERGY1423",
+          "ALLERGY14331NEMIS",
+          "ALLERGY16137NEMIS",
+          "ALLERGY16139NEMIS",
+          "ALLERGY1884",
+          "ALLERGY19691NEMIS",
+          "ALLERGY2084",
+          "ALLERGY21535NEMIS",
+          "ALLERGY2317",
+          "ALLERGY2320",
+          "ALLERGY2327",
+          "ALLERGY23931NEMIS",
+          "ALLERGY24736NEMIS",
+          "ALLERGY25105NEMIS",
+          "ALLERGY2554",
+          "ALLERGY2579",
+          "ALLERGY2669",
+          "ALLERGY2713",
+          "ALLERGY2836",
+          "ALLERGY2911",
+          "ALLERGY2964",
+          "ALLERGY3168",
+          "ALLERGY3228",
+          "ALLERGY3481",
+          "ALLERGY3514",
+          "ALLERGY3631",
+          "ALLERGY3698",
+          "ALLERGY3699",
+          "ALLERGY40031NEMIS",
+          "ALLERGY4106",
+          "ALLERGY4199NEMIS",
+          "ALLERGY4400",
+          "ALLERGY4561EMIS",
+          "ALLERGY465NEMIS",
+          "ALLERGY467NEMIS",
+          "ALLERGY471NEMIS",
+          "ALLERGY472",
+          "ALLERGY492",
+          "ALLERGY5013EMIS",
+          "ALLERGY5056",
+          "ALLERGY51115NEMIS",
+          "ALLERGY567",
+          "ALLERGY5831NEMIS",
+          "ALLERGY5951",
+          "ALLERGY5952",
+          "ALLERGY5982EMIS",
+          "ALLERGY601",
+          "ALLERGY6022EMIS",
+          "ALLERGY6072",
+          "ALLERGY6416BRIDL",
+          "ALLERGY6423",
+          "ALLERGY6460BRIDL",
+          "ALLERGY656",
+          "ALLERGY6773EMIS",
+          "ALLERGY687",
+          "ALLERGY69",
+          "ALLERGY6937",
+          "ALLERGY7414",
+          "ALLERGY7428",
+          "ALLERGY746",
+          "ALLERGY760",
+          "ALLERGY7605",
+          "ALLERGY772",
+          "ALLERGY8040BRIDL",
+          "ALLERGY855",
+          "ALLERGY867",
+          "ALLERGY8948",
+          "ALLERGY912",
+          "ALLERGY9939",
+          "CUGE4562NEMIS",
+          "DEGRADE_DEGRADE_MED_",
+          "DEGRADE_EVENT_9417_7",
+          "ALLERGY5923EMIS"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PCR_RCGP_MISOPROSTOL",
+    "terms": [
+      {
+        "term": "cytotec"
+      },
+      {
+        "term": "misoprostol"
+      }
+    ],
+    "ignore": [
+      {
+        "type": "ReadV2",
+        "values": [
+          "TJ..."
+        ]
+      },
+      {
+        "type": "EMIS",
+        "values": [
+          "ALLERGY3778"
+        ]
+      }
+    ]
+  }
 ]
