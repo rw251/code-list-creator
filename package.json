@@ -22,9 +22,11 @@
     "event-stream": "^3.3.2",
     "fs": "0.0.2",
     "inquirer": "^0.12.0",
-    "node-inspector": "^0.12.6",
     "prompt": "^1.0.0",
     "sqlite3": "^3.1.1",
     "stream-transform": "^0.1.1"
+  },
+  "devDependencies": {
+    "node-inspector": "^0.12.6"
   }
 }
