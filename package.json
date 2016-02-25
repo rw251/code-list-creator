@@ -1,0 +1,30 @@
+{
+  "name": "drug-list",
+  "version": "0.0.1",
+  "description": "1. User just wants a link to a list of codes\r 2. afsd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js",
+    "debug": "node-debug main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/rwilliams251/drug-list.git"
+  },
+  "author": "Richard Williams",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/rwilliams251/drug-list#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "csv": "^0.4.6",
+    "csv-parse": "^1.0.1",
+    "event-stream": "^3.3.2",
+    "fs": "0.0.2",
+    "inquirer": "^0.12.0",
+    "node-inspector": "^0.12.6",
+    "prompt": "^1.0.0",
+    "sqlite3": "^3.1.1",
+    "stream-transform": "^0.1.1"
+  }
+}
