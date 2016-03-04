@@ -16,15 +16,15 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/rwilliams251/drug-list#readme",
   "dependencies": {
-    "colors": "^1.1.2",
-    "csv": "^0.4.6",
-    "csv-parse": "^1.0.1",
-    "event-stream": "^3.3.2",
-    "fs": "0.0.2",
-    "inquirer": "^0.12.0",
-    "prompt": "^1.0.0",
-    "sqlite3": "^3.1.1",
-    "stream-transform": "^0.1.1"
+    "colors": "1.x.x",
+    "csv": "0.4.x",
+    "csv-parse": "1.x.x",
+    "event-stream": "3.x.x",
+    "fs": "0.x.x",
+    "inquirer": "0.12.x",
+    "prompt": "1.x.x",
+    "sqlite3": "3.1.x",
+    "stream-transform": "0.1.x"
   },
   "devDependencies": {
     "chai": "^3.5.0",
