@@ -4,3 +4,6 @@ Clinical code list creator [![Build Status](https://travis-ci.org/rw251/code-lis
 
 1. User just wants a link to a list of codes
 2. afsd
+
+# Pre-requisites
+node.js >= 0.10.0
