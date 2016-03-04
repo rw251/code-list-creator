@@ -134,10 +134,10 @@ var getFromSynonyms = function(synonyms, callback) {
 
   db.serialize(function() {
     var simpleSynonyms = synonyms.filter(function(val) {
-      return val.indexOf('*') === -1;
+      return val.indexOf('*') === -1 && val.indexOf(' ') === -1;
     });
     var wildcardSynonyms = synonyms.filter(function(val) {
-      return val.indexOf('*') > -1;
+      return val.indexOf('*') > -1 || val.indexOf(' ') > -1;
     });
     db.each(["WITH RECURSIVE ",
              "  child_of_code(n) AS ( ",

@@ -4,7 +4,7 @@
   "description": "1. User just wants a link to a list of codes\r 2. afsd",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --reporter spec",
     "start": "node main.js",
     "debug": "node-debug main.js"
   },
@@ -27,6 +27,8 @@
     "stream-transform": "^0.1.1"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
     "node-inspector": "^0.12.6"
   }
 }
