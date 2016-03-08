@@ -73,6 +73,68 @@ var Graph = function() {
       return !self.node(node).include;
     }));
   };
+
+  // For a graph G we return an array of connected subgraphs
+  this.connectedSubgraphs = function() {
+    var i, j, u, v, rtn = [],
+      Q = [], G = this;
+
+    G.nodes().forEach(function(node) {
+      G.prop(node, "unvisited", true);
+    });
+
+    G.nodes().forEach(function(node) {
+      if (!G.prop(node, "unvisited")) return;
+
+      var subGraph = new Graph();
+      Q.push(node);
+
+      while (Q.length > 0) {
+        u = Q.splice(0, 1)[0];
+        subGraph.addNode(u, G.node(u));
+        var edges = G.prop(u, "children").concat(G.prop(u, "parent"));
+        for (i = 0; i < edges.length; i += 1) {
+          v = edges[i];
+          if (G.prop(v, "unvisited")) {
+            G.propDelete(v, "unvisited");
+            Q.push(v);
+          }
+        }
+      }
+      rtn.push(subGraph);
+    });
+
+    return rtn;
+  };
+
+  //dfs on tree to output all children
+  this.getDescendents = function(v) {
+    var i, j, u, status,
+      rtn = [],
+      G = this,
+      Q = [].concat(G.prop(v, "children"));
+
+    G.nodes().forEach(function(node) {
+      G.prop(node, "unvisited", true);
+    });
+
+    while (Q.length > 0) {
+      u = Q.splice(0, 1)[0];
+
+      if (!G.prop(u, "unvisited")) continue;
+      G.propDelete(u, "unvisited");
+
+      rtn.push(u);
+
+      for (i = G.prop(u, "children").length - 1; i >= 0; i -= 1) {
+        v = G.prop(u, "children")[i];
+        if (G.prop(v, "unvisited")) {
+          Q.unshift(v);
+        }
+      }
+    }
+    return rtn;
+  };
 };
 
 Graph.merge = function(graphs) {

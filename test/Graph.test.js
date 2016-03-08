@@ -90,16 +90,24 @@ describe('Graph', function() {
   describe("Review", function() {
     var g = new Graph();
     g.addNode("1", {
-      include: true
+      include: true,
+      parent: [],
+      children: ["2"]
     });
     g.addNode("2", {
-      include: false
+      include: false,
+      parent: ["2"],
+      children: ["3"]
     });
     g.addNode("3", {
-      include: true
+      include: true,
+      parent: ["2"],
+      children: []
     });
     g.addNode("4", {
-      include: false
+      include: false,
+      parent: [],
+      children: []
     });
 
     it("identifies included nodes", function() {
@@ -108,6 +116,20 @@ describe('Graph', function() {
 
     it("identifies excluded nodes", function() {
       expect(g.excluded()).to.have.length(2).and.to.include("2").and.to.include("4");
+    });
+
+    it("identifies subgraphs", function(){
+      var subs = g.connectedSubgraphs();
+
+      expect(subs).to.have.length(2);
+      expect(subs[0].nodes()).to.have.length(3).and.to.include("1").and.to.include("2").and.to.include("3");
+      expect(subs[1].nodes()).to.have.length(1).and.to.include("4");
+    });
+
+    it("gets descendents", function(){
+      var desc = g.getDescendents("1");
+
+      expect(desc).to.have.length(2).and.to.include("2").and.to.include("3");
     });
 
   });

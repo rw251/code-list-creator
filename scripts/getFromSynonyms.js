@@ -4,67 +4,6 @@ var sqlite3 = require('sqlite3'),
   inquirer = require('inquirer'),
   Graph = require('./Graph.js');
 
-// For a graph G, and start node s, we return an array of connected subgraphs
-var getConnectedSubgraphs = function(G) {
-  var i, j, u, v, rtn = [],
-    Q = [];
-
-  G.nodes().forEach(function(node) {
-    G.prop(node, "unvisited", true);
-  });
-
-  G.nodes().forEach(function(node) {
-    if (!G.prop(node, "unvisited")) return;
-
-    var subGraph = new Graph();
-    Q.push(node);
-
-    while (Q.length > 0) {
-      u = Q.splice(0, 1)[0];
-      subGraph.addNode(u, G.node(u));
-      var edges = G.prop(u, "children").concat(G.prop(u, "parent"));
-      for (i = 0; i < edges.length; i += 1) {
-        v = edges[i];
-        if (G.prop(v, "unvisited")) {
-          G.propDelete(v, "unvisited");
-          Q.push(v);
-        }
-      }
-    }
-    rtn.push(subGraph);
-  });
-
-  return rtn;
-};
-
-var getDescendents = function(G, v) {
-  //dfs on tree to output all children
-  var i, j, u, status,
-    rtn = [],
-    Q = [].concat(G.prop(v, "children"));
-
-  G.nodes().forEach(function(node) {
-    G.prop(node, "unvisited", true);
-  });
-
-  while (Q.length > 0) {
-    u = Q.splice(0, 1)[0];
-
-    if (!G.prop(u, "unvisited")) continue;
-    G.propDelete(u, "unvisited");
-
-    rtn.push(u);
-
-    for (i = G.prop(u, "children").length - 1; i >= 0; i -= 1) {
-      v = G.prop(u, "children")[i];
-      if (G.prop(v, "unvisited")) {
-        Q.unshift(v);
-      }
-    }
-  }
-  return rtn;
-};
-
 var displayChildrenInTree = function(G, v) {
   //dfs on tree to output all children
   var i, j, u, status,
@@ -175,7 +114,7 @@ var getFromSynonyms = function(synonyms, callback) {
     // Now we split the graph into subgraphs of connected components
     // - each one can then be processed in isolation
 
-    var graphs = getConnectedSubgraphs(graph, graph.nodes[0]);
+    var graphs = graph.connectedSubgraphs();
     graphs.forEach(addDepth);
 
     callback(null, graphs);
@@ -205,7 +144,7 @@ var processResults = function(graphs, callback) {
 
   var childCheckDone = function(val) {
     if (val.children) {
-      getDescendents(g, v).forEach(function(p) {
+      g.getDescendents(v).forEach(function(p) {
         g.prop(p, "include", val.children.indexOf(p) > -1);
       });
     }
@@ -215,7 +154,7 @@ var processResults = function(graphs, callback) {
   };
 
   var childCheck = function(val) {
-    var allChildrenIncluded = getDescendents(g, v).reduce(function(prev, cur) {
+    var allChildrenIncluded = g.getDescendents(v).reduce(function(prev, cur) {
       return prev && (g.prop(cur, "include") || g.prop(cur, "include") === false);
     }, true);
 
@@ -233,7 +172,7 @@ var processResults = function(graphs, callback) {
       j++;
       next();
     } else {
-      var checkboxes = getDescendents(g, v).map(function(val) {
+      var checkboxes = g.getDescendents(v).map(function(val) {
         return {
           "value": val,
           "name": g.prop(val, "description"),
@@ -256,7 +195,7 @@ var processResults = function(graphs, callback) {
       g.prop(p, "include", false);
     });
     //reject children
-    getDescendents(g, v).forEach(function(p) {
+    g.getDescendents(v).forEach(function(p) {
       g.prop(p, "include", val.include.indexOf(p) > -1);
     });
     j++;
@@ -275,7 +214,7 @@ var processResults = function(graphs, callback) {
           type: "checkbox",
           name: "include",
           message: "All children will be rejected unless you select them below",
-          choices: getDescendents(g, v).map(function(val) {
+          choices: g.getDescendents(v).map(function(val) {
             return {
               value: val,
               name: g.prop(val, "description"),

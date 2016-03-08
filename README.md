@@ -1,5 +1,9 @@
-Clinical code list creator [![Build Status](https://travis-ci.org/rw251/code-list-creator.svg?branch=master)](https://travis-ci.org/rw251/code-list-creator) [![Dependency Status](https://david-dm.org/rw251/code-list-creator.svg)](https://david-dm.org/rw251/code-list-creator) [![codecov.io](https://codecov.io/github/rw251/code-list-creator/coverage.svg?branch=master)](https://codecov.io/github/rw251/code-list-creator?branch=master) [![bitHound Overall Score](https://www.bithound.io/github/rw251/code-list-creator/badges/score.svg)](https://www.bithound.io/github/rw251/code-list-creator)
-=========================
+# Clinical code list creator
+[![travis][travis-image]][travis-url]
+[![david-dm][david-dm-image]][david-dm-url]
+[![codecov][codecov-image]][codecov-url]
+[![bitHound][bithound-image]][bithound-url]
+
 # Use cases
 
 1. User just wants a link to a list of codes
@@ -7,3 +11,12 @@ Clinical code list creator [![Build Status](https://travis-ci.org/rw251/code-lis
 
 # Pre-requisites
 node.js >= 0.10.0
+
+[travis-url]: https://travis-ci.org/rw251/code-list-creator
+[travis-image]: https://travis-ci.org/rw251/code-list-creator.svg?branch=master
+[david-dm-image]: https://david-dm.org/rw251/code-list-creator.svg
+[david-dm-url]: https://david-dm.org/rw251/code-list-creator
+[codecov-image]: https://codecov.io/github/rw251/code-list-creator/coverage.svg?branch=master
+[codecov-url]: https://codecov.io/github/rw251/code-list-creator?branch=master
+[bithound-image]: https://www.bithound.io/github/rw251/code-list-creator/badges/score.svg
+[bithound-url]: https://www.bithound.io/github/rw251/code-list-creator
