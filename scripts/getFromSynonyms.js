@@ -4,69 +4,6 @@ var sqlite3 = require('sqlite3'),
   inquirer = require('inquirer'),
   Graph = require('./Graph.js');
 
-var displayChildrenInTree = function(G, v) {
-  //dfs on tree to output all children
-  var i, j, u, status,
-    Q = [].concat(G.prop(v, "children"));
-  G.nodes().forEach(function(node) {
-    G.prop(node, "unvisited", true);
-  });
-
-  while (Q.length > 0) {
-    u = Q.splice(0, 1)[0];
-
-    if (!G.prop(u, "unvisited")) continue;
-    G.propDelete(u, "unvisited");
-
-    status = "";
-    if (G.prop(u, "include")) status = "  INCLUDED".cyan;
-    if (G.prop(u, "include") === false) status = "  REJECTED".red;
-    console.log(new Array(G.prop(u, "depth") * 3).join(" ") + "+-- ".white + "CHILD: ".yellow + u + "-" + G.prop(u, "description").join(" | ").yellow + status);
-
-    var edges = G.prop(u, "children");
-    for (i = edges.length - 1; i >= 0; i -= 1) {
-      v = edges[i];
-      if (G.prop(v, "unvisited")) {
-        Q.unshift(v);
-      }
-    }
-  }
-
-  return;
-};
-
-var addDepth = function(G) {
-  var i, j, u, v, Q = [];
-
-  G.nodes().forEach(function(node) {
-    G.prop(node, "visited", 0);
-    G.prop(node, "depth", 0);
-  });
-
-  G.nodes().forEach(function(node) {
-    if (G.prop(node, "visited") || G.prop(node, "parent").length > 0) return;
-
-    Q.push(node);
-
-    while (Q.length > 0) {
-      u = Q.splice(0, 1)[0];
-      var edges = G.prop(u, "children");
-      for (i = 0; i < edges.length; i += 1) {
-        v = edges[i];
-        if (G.prop(v, "visited") < G.prop(v, "parent").length - 1) {
-          G.prop(v, "visited", G.prop(v, "visited") + 1);
-        } else if (G.prop(v, "visited") === G.prop(v, "parent").length - 1) {
-          G.propDelete(v, "visited");
-          G.prop(v, "depth", G.prop(u, "depth") + 1);
-          Q.push(v);
-        }
-      }
-    }
-  });
-
-  return G;
-};
-
 var getFromSynonyms = function(synonyms, callback) {
   var graph = new Graph(),
     db = new sqlite3.Database(path.join('db', 'dictionary.sqlite'));
@@ -115,7 +52,9 @@ var getFromSynonyms = function(synonyms, callback) {
     // - each one can then be processed in isolation
 
     var graphs = graph.connectedSubgraphs();
-    graphs.forEach(addDepth);
+    graphs.forEach(function(g){
+      g.addDepth();
+    });
 
     callback(null, graphs);
   });
@@ -286,12 +225,11 @@ var processResults = function(graphs, callback) {
         console.log("PARENT: ".yellow + g.prop(v, "parent")[k] + "-" + g.prop(g.prop(v, "parent")[k], "description").join(" | ").yellow + status);
       }
       console.log("|".white);
-      status = "";
-      if (g.prop(v, "include")) status = "  INCLUDED".cyan;
+      status = g.prop(v, "include") ? "  INCLUDED".cyan : "";
       if (g.prop(v, "include") === false) status = "  REJECTED".red;
       console.log("+--".white + " CODE: ".green + v + "-" + g.prop(v, "description").join(" | ").green + status);
 
-      displayChildrenInTree(g, v);
+      g.displayChildrenInTree(v);
 
       console.log("");
       if (!g.prop(v, "include") && g.prop(v, "include") !== false) {
@@ -310,10 +248,6 @@ var processResults = function(graphs, callback) {
   };
 
   next();
-};
-
-var updateGraph = function() {
-
 };
 
 var validateResults = function(graph, synonyms, callback) {
@@ -383,6 +317,9 @@ var resultsAndProcess = function(synonyms, callback) {
       return callback(err);
     }
     processResults(graphs, function(err, graphs) {
+      if (err) {
+        return callback(err);
+      }
       var i = 0;
       var doNext = function() {
         if (i >= graphs.length) return callback(null, graphs);

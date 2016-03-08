@@ -77,7 +77,8 @@ var Graph = function() {
   // For a graph G we return an array of connected subgraphs
   this.connectedSubgraphs = function() {
     var i, j, u, v, rtn = [],
-      Q = [], G = this;
+      Q = [],
+      G = this;
 
     G.nodes().forEach(function(node) {
       G.prop(node, "unvisited", true);
@@ -134,6 +135,70 @@ var Graph = function() {
       }
     }
     return rtn;
+  };
+
+  this.displayChildrenInTree = function(v) {
+    //dfs on tree to output all children
+    var i, j, u, status, G = this,
+      Q = [].concat(G.prop(v, "children"));
+    G.nodes().forEach(function(node) {
+      G.prop(node, "unvisited", true);
+    });
+
+    while (Q.length > 0) {
+      u = Q.splice(0, 1)[0];
+
+      if (!G.prop(u, "unvisited")) continue;
+      G.propDelete(u, "unvisited");
+
+      status = "";
+      if (G.prop(u, "include")) status = "  INCLUDED".cyan;
+      if (G.prop(u, "include") === false) status = "  REJECTED".red;
+      console.log(new Array(G.prop(u, "depth") * 3).join(" ") + "+-- ".white + "CHILD: ".yellow + u + "-" + G.prop(u, "description").join(" | ").yellow + status);
+
+      var edges = G.prop(u, "children");
+      for (i = edges.length - 1; i >= 0; i -= 1) {
+        v = edges[i];
+        if (G.prop(v, "unvisited")) {
+          Q.unshift(v);
+        }
+      }
+    }
+
+    return;
+  };
+
+  this.addDepth = function() {
+    var i, j, u, v, Q = [],
+      G = this;
+
+    G.nodes().forEach(function(node) {
+      G.prop(node, "visited", 0);
+      G.prop(node, "depth", 0);
+    });
+
+    G.nodes().forEach(function(node) {
+      if (G.prop(node, "visited") || G.prop(node, "parent").length > 0) return;
+
+      Q.push(node);
+
+      while (Q.length > 0) {
+        u = Q.splice(0, 1)[0];
+        var edges = G.prop(u, "children");
+        for (i = 0; i < edges.length; i += 1) {
+          v = edges[i];
+          if (G.prop(v, "visited") < G.prop(v, "parent").length - 1) {
+            G.prop(v, "visited", G.prop(v, "visited") + 1);
+          } else if (G.prop(v, "visited") === G.prop(v, "parent").length - 1) {
+            G.propDelete(v, "visited");
+            G.prop(v, "depth", G.prop(u, "depth") + 1);
+            Q.push(v);
+          }
+        }
+      }
+    });
+
+    return G;
   };
 };
 
