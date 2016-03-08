@@ -1,9 +1,4 @@
-//Polyfill the array check for IE<9
-if (!Array.isArray) {
-  Array.isArray = function(arg) {
-    return Object.prototype.toString.call(arg) === '[object Array]';
-  };
-}
+require("./Array.js");
 
 var Graph = function() {
   this.graph = {};
@@ -34,7 +29,6 @@ var Graph = function() {
   };
 
   this.prop = function(node, prop, value) {
-    //Add node to graph if not already exists
     if (this.hasNode(node)) {
       if (value === undefined) {
         return this.graph[node][prop];
@@ -45,7 +39,6 @@ var Graph = function() {
   };
 
   this.propDelete = function(node, prop) {
-    //Add node to graph if not already exists
     if (this.hasNode(node)) {
       delete this.graph[node][prop];
     }
