@@ -320,12 +320,18 @@ var validateResults = function(graph, synonyms, callback) {
   // Show
   // Items rejected despite presence of a synonyms
 
+  var currentNode;
+  var notInDescription = function(synonym) {
+    return graph.prop(currentNode, "description").join("|").toLowerCase().search(new RegExp(synonym.toLowerCase().replace("*", "").replace(" ", ".*"), 'g')) > -1;
+  };
+
+  var nodeButNoSynonym = function(node){
+    currentNode = node;
+    return graph.prop(node, "include") && synonyms.filter(notInDescription).length === 0;
+  };
+
   // Parent/children included but no synonym
-  var vs = graph.nodes().filter(function(v) {
-    return graph.prop(v, "include") && synonyms.filter(function(s) {
-      return graph.prop(v, "description").join("|").toLowerCase().search(new RegExp(s.toLowerCase().replace("*", "").replace(" ", ".*"), 'g')) > -1;
-    }).length === 0;
-  });
+  var vs = graph.nodes().filter(nodeButNoSynonym);
 
   vs.forEach(function(v) {
     console.log(v, graph.prop(v, "description").join(" | "));
@@ -333,11 +339,7 @@ var validateResults = function(graph, synonyms, callback) {
 
   var updateResults = function(v) {
     if (v.synonym === "") {
-      vs = graph.nodes().filter(function(v) {
-        return graph.prop(v, "include") && synonyms.filter(function(s) {
-          return graph.prop(v, "description").join("|").toLowerCase().search(new RegExp(s.toLowerCase().replace("*", "").replace(" ", ".*"), 'g')) > -1;
-        }).length === 0;
-      });
+      vs = graph.nodes().filter(nodeButNoSynonym);
 
       vs.forEach(function(v) {
         graph.prop(v, "include", false);
@@ -345,11 +347,7 @@ var validateResults = function(graph, synonyms, callback) {
     } else {
       synonyms.push(v.synonym);
     }
-    vs = graph.nodes().filter(function(v) {
-      return graph.prop(v, "include") && synonyms.filter(function(s) {
-        return graph.prop(v, "description").join("|").toLowerCase().search(new RegExp(s.toLowerCase().replace("*", "").replace(" ", ".*"), 'g')) > -1;
-      }).length === 0;
-    });
+    vs = graph.nodes().filter(nodeButNoSynonym);
 
     vs.forEach(function(v) {
       console.log(v, graph.prop(v, "description").join(" | "));
