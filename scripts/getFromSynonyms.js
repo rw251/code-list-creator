@@ -52,11 +52,33 @@ var getFromSynonyms = function(synonyms, callback) {
     // - each one can then be processed in isolation
 
     var graphs = graph.connectedSubgraphs();
-    graphs.forEach(function(g){
+    graphs.forEach(function(g) {
       g.addDepth();
     });
 
     callback(null, graphs);
+  });
+};
+
+var getSiblings = function(code, callback) {
+  var siblings = [];
+  db.serialize(function() {
+    db.each(["SELECT  h2.code as sibling, h2.description as siblingDescription",
+    " FROM hierarchy h1 INNER JOIN hierarchy h2 ON h2.parent= h1.parent ",
+    " WHERE h1.code = '" + code + "' and h2.code != '" + code + "'"].join(""),
+      function(err, row) {
+        //Each time we get a result back
+        if (err) {
+          return callback(err);
+        }
+        //graph.addNode(row.sibling);
+        //graph.addNode(row.siblingDescription);
+        siblings.push({code: row.sibling, description: row.siblingDescription});
+      });
+  });
+
+  db.close(function() {
+    callback(null, siblings);
   });
 };
 
@@ -259,7 +281,7 @@ var validateResults = function(graph, synonyms, callback) {
     return graph.prop(currentNode, "description").join("|").toLowerCase().search(new RegExp(synonym.toLowerCase().replace("*", "").replace(" ", ".*"), 'g')) > -1;
   };
 
-  var nodeButNoSynonym = function(node){
+  var nodeButNoSynonym = function(node) {
     currentNode = node;
     return graph.prop(node, "include") && synonyms.filter(notInDescription).length === 0;
   };
