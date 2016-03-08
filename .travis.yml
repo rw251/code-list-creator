@@ -6,6 +6,6 @@ node_js:
   - "0.11"
   - "0.10"
 before_install:
-  - pip install --user codecov
+  - npm install codecov
 after_success:
-  - codecov
+  - node_modules/.bin/codecov
