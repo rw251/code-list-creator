@@ -1,20 +1,20 @@
 {
   "name": "drug-list",
   "version": "0.0.1",
-  "description": "1. User just wants a link to a list of codes\r 2. afsd",
+  "description": "A reproducible method for constructing reusable code lists for clinical research.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
     "start": "node main.js",
     "debug": "node-debug main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/rwilliams251/drug-list.git"
+    "url": "git+ssh://git@github.com:rw251/code-list-creator.git"
   },
   "author": "Richard Williams",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/rwilliams251/drug-list#readme",
+  "homepage": "https://github.com/rw251/code-list-creator",
   "dependencies": {
     "colors": "1.x.x",
     "csv": "0.4.x",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "chai": "3.x.x",
+    "istanbul": "0.4.x",
     "mocha": "2.x.x",
     "node-inspector": "0.12.x"
   }
