@@ -6,15 +6,15 @@ var sqlite3 = require('sqlite3'),
   Graph = require('./Graph.js');
 
 module.exports = {
-  getFromSynonyms: function(synonyms, callback) {
+  getFromSynonyms: function(meta, callback) {
     var graph = new Graph(),
       db = new sqlite3.Database(path.join('db', 'dictionary.sqlite'));
 
     db.serialize(function() {
-      var simpleSynonyms = synonyms.filter(function(val) {
+      var simpleSynonyms = meta.synonyms.filter(function(val) {
         return val.indexOf('*') === -1 && val.indexOf(' ') === -1;
       });
-      var wildcardSynonyms = synonyms.filter(function(val) {
+      var wildcardSynonyms = meta.synonyms.filter(function(val) {
         return val.indexOf('*') > -1 || val.indexOf(' ') > -1;
       });
       db.each(["WITH RECURSIVE ",
@@ -36,6 +36,15 @@ module.exports = {
           }
           graph.addNode(row.code);
           graph.addNode(row.parent);
+
+          if (meta.excludedCodes) {
+            if (meta.excludedCodes.indexOf(row.code) > -1) graph.prop(row.code, "include", false);
+            if (meta.excludedCodes.indexOf(row.parent) > -1) graph.prop(row.parent, "include", false);
+          }
+          if (meta.includedCodes) {
+            if (meta.includedCodes.indexOf(row.code) > -1) graph.prop(row.code, "include", true);
+            if (meta.includedCodes.indexOf(row.parent) > -1) graph.prop(row.parent, "include", true);
+          }
 
           graph.prop(row.code, "match", true);
 
@@ -63,10 +72,10 @@ module.exports = {
   },
 
   getSiblings: function(code, callback) {
-    var siblings = [],
+    var siblings = {},
       db = new sqlite3.Database(path.join('db', 'dictionary.sqlite'));
     db.serialize(function() {
-      db.each(["SELECT  h2.code as sibling, h2.description as siblingDescription",
+      db.each(["SELECT h2.code as sibling, h2.description as siblingDescription ",
       " FROM hierarchy h1 INNER JOIN hierarchy h2 ON h2.parent= h1.parent ",
       " WHERE h1.code = '" + code + "' and h2.code != '" + code + "'"].join(""),
         function(err, row) {
@@ -74,12 +83,8 @@ module.exports = {
           if (err) {
             return callback(err);
           }
-          //graph.addNode(row.sibling);
-          //graph.addNode(row.siblingDescription);
-          siblings.push({
-            code: row.sibling,
-            description: row.siblingDescription
-          });
+          if (!siblings[row.sibling]) siblings[row.sibling] = [row.siblingDescription];
+          else siblings[row.sibling].push(row.siblingDescription);
         });
     });
 

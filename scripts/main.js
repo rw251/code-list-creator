@@ -41,15 +41,20 @@ var processResults = function(graphs, callback) {
   var childCheck = function(val) {
     var allChildrenIncluded = g.getDescendents(v).reduce(function(prev, cur) {
       return prev && (g.prop(cur, "include") || g.prop(cur, "include") === false);
-    }, true);
+    }, true); //not working for all children rejected??
 
-    if (val.include || val.include === false) {
-      //single parent included
-      g.prop(g.prop(v, "parent")[0], "include", val.include);
-    } else if (val.parents) {
-      //list of included parents
-      g.prop(v, "parent").forEach(function(p) {
-        g.prop(p, "include", val.parents.indexOf(p) > -1);
+    if (val.siblings) {
+      //val.siblings is a list of included siblings
+      val.siblings.forEach(function(sibling) {
+        if (!g.hasNode(sibling.code)) {
+          g.addNode(sibling.code, {
+            description: sibling.description,
+            children: [],
+            parent: g.prop(v, "parent"),
+            depth: g.prop(v, "depth")
+          });
+        }
+        g.prop(sibling.code, "include", true);
       });
     }
 
@@ -75,9 +80,9 @@ var processResults = function(graphs, callback) {
   };
 
   var rejectCheck = function(val) {
-    //reject parents in all cases - any reason why not??
+    //reject parents unless already included
     g.prop(v, "parent").forEach(function(p) {
-      g.prop(p, "include", false);
+      if(!g.prop(p,"include")) g.prop(p, "include", false);
     });
     //reject children
     g.getDescendents(v).forEach(function(p) {
@@ -85,6 +90,49 @@ var processResults = function(graphs, callback) {
     });
     j++;
     next();
+  };
+
+  var siblingCheck = function(val) {
+    if (val.include || val.include === false) {
+      //single parent included/excluded
+      g.prop(g.prop(v, "parent")[0], "include", val.include);
+    } else if (val.parents) {
+      //val.parents is a list of included parents
+      g.prop(v, "parent").forEach(function(p) {
+        g.prop(p, "include", val.parents.indexOf(p) > -1);
+      });
+    }
+
+    //get siblings
+    db.getSiblings(v, function(err, siblings) {
+      if (err) {
+        return callback(err);
+      }
+
+      var unmatchedSiblings = Object.keys(siblings).filter(function(val) {
+        return !g.hasNode(val);
+      });
+
+      if (unmatchedSiblings && unmatchedSiblings.length > 0) {
+        var checkboxes = unmatchedSiblings.map(function(val) {
+          return {
+            "value": {code: val, description: siblings[val]},
+            "name": val + ": " + siblings[val].join(" | "),
+            "short": val
+          };
+        });
+        inquirer.prompt([{
+          type: "checkbox",
+          name: "siblings",
+          message: "Select sibling codes to include:",
+          choices: checkboxes
+      }], childCheck); //TODO make this sibling check
+      } else {
+        childCheck({
+          q: "y"
+        });
+      }
+    });
   };
 
   var parentCheck = function(val) {
@@ -123,7 +171,7 @@ var processResults = function(graphs, callback) {
           name: "include",
           message: "Include parent code " + g.prop(v, "parent")[0] + "?",
           default: "y"
-        }], childCheck);
+        }], siblingCheck); //TODO make this sibling check
       } else {
         var checkboxes = g.prop(v, "parent").filter(function(val) {
           return !g.prop(val, "include");
@@ -139,23 +187,25 @@ var processResults = function(graphs, callback) {
           name: "parents",
           message: "Select parent codes to include:",
           choices: checkboxes
-        }], childCheck);
+        }], siblingCheck); //TODO make this sibling check
       }
     }
   };
 
+  //Process the next code.
   var next = function() {
     if (i > graphs.length - 1) {
       //all done
       return callback(null, graphs);
     }
     if (orderedNodes && j > orderedNodes.length - 1) {
+      //This subgraph is complete... move to the next
       j = 0;
       i++;
       next();
     } else {
       if (j === 0) {
-        //Next graph
+        //Load next graph
         g = graphs[i];
         orderedNodes = g.nodes().sort(sortByDepth).filter(removeLeaves);
       }
@@ -257,8 +307,8 @@ var validateResults = function(graph, synonyms, callback) {
   }
 };
 
-var resultsAndProcess = function(synonyms, callback) {
-  db.getFromSynonyms(synonyms, function(err, graphs) {
+var resultsAndProcess = function(meta, callback) {
+  db.getFromSynonyms(meta, function(err, graphs) {
     if (err) {
       return callback(err);
     }
@@ -269,7 +319,7 @@ var resultsAndProcess = function(synonyms, callback) {
       var i = 0;
       var doNext = function() {
         if (i >= graphs.length) return callback(null, graphs);
-        validateResults(graphs[i], synonyms, function() {
+        validateResults(graphs[i], meta.synonyms, function() {
           i++;
           doNext();
         });

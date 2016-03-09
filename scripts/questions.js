@@ -7,7 +7,7 @@ module.exports = {
 
   "initial": [
     {
-      name: "name",
+      name: "author",
       message: "Enter your name"
       },
     {
@@ -39,7 +39,7 @@ module.exports = {
         ]
       },
     {
-      name: "listname",
+      name: "name",
       message: "Please enter a short name for your code list"
       },
     {

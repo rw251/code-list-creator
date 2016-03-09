@@ -118,7 +118,7 @@ describe('Graph', function() {
       expect(g.excluded()).to.have.length(2).and.to.include("2").and.to.include("4");
     });
 
-    it("identifies subgraphs", function(){
+    it("identifies subgraphs", function() {
       var subs = g.connectedSubgraphs();
 
       expect(subs).to.have.length(2);
@@ -126,7 +126,7 @@ describe('Graph', function() {
       expect(subs[1].nodes()).to.have.length(1).and.to.include("4");
     });
 
-    it("gets descendents", function(){
+    it("gets descendents", function() {
       var desc = g.getDescendents("1");
 
       expect(desc).to.have.length(2).and.to.include("2").and.to.include("3");
@@ -150,12 +150,52 @@ describe('Graph', function() {
       include: false
     });
 
-    it("merges", function(){
-      var g3 = Graph.merge([g1,g2]);
+    it("merges", function() {
+      var g3 = Graph.merge([g1, g2]);
 
       expect(g3.nodes()).to.have.length(4).and.to.include("1").and.to.include("a");
       expect(g3.included()).to.have.length(2).and.to.include("1").and.to.include("a");
       expect(g3.excluded()).to.have.length(2).and.to.include("2").and.to.include("b");
+    });
+  });
+
+  describe("Depth", function() {
+    var g = new Graph();
+    g.addNode("3", {
+      include: true,
+      parent: ["1","2"],
+      children: ["4", "5"]
+    });
+    g.addNode("5", {
+      include: false,
+      parent: ["3"],
+      children: []
+    });
+    g.addNode("4", {
+      include: false,
+      parent: ["3"],
+      children: []
+    });
+    g.addNode("1", {
+      include: true,
+      parent: [],
+      children: ["2","3"]
+    });
+    g.addNode("2", {
+      include: false,
+      parent: ["1"],
+      children: ["3"]
+    });
+    it("adds depth", function() {
+      expect(g.nodes()).to.have.length(5);
+      g.addDepth();
+
+      expect(g.nodes()).to.have.length(5);
+      expect(g.node("1")).to.have.property("depth").that.equals(0);
+      expect(g.node("2")).to.have.property("depth").that.equals(1);
+      expect(g.node("3")).to.have.property("depth").that.equals(2);
+      expect(g.node("4")).to.have.property("depth").that.equals(3);
+      expect(g.node("5")).to.have.property("depth").that.equals(3);
     });
   });
 

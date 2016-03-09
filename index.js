@@ -11,8 +11,12 @@ var util = require('util'),
   file = require('./scripts/file.js'),
   q = require('./scripts/questions.js');
 
+var meta = process.argv.length>2 ? file.loadMetadata(process.argv[2]) : {};
+console.dir(meta);
+
 // Read synonyms from file
-var synonyms = file.getSynonyms();
+var synonyms = Object.keys(meta).length > 0 ? meta.synonyms : file.getSynonyms();
+console.dir(synonyms);
 
 // Read defaults from file
 var defaults = file.getDefaults();
@@ -20,7 +24,8 @@ var defaults = file.getDefaults();
 var questions = q.initial;
 
 questions.forEach(function(q) {
-  if (defaults[q.name]) q.default = defaults[q.name];
+  if (meta[q.name]) q.default = meta[q.name];
+  else if (defaults[q.name]) q.default = defaults[q.name];
 });
 
 inquirer.prompt(questions, function(result) {
@@ -28,9 +33,16 @@ inquirer.prompt(questions, function(result) {
     defaults[key] = result[key];
   });
 
+  meta.version = pkg.version; //TODO maybe a warning if the version has changed
+  meta.name = defaults.name;
+  meta.description = defaults.description;
+  meta.author = defaults.author;
+  meta.terminologies = defaults.terminologies;
+  meta.synonyms = synonyms;
+
   file.setDefaults(defaults);
 
-  main.resultsAndProcess(synonyms, function(err, data) {
+  main.resultsAndProcess(meta, function(err, data) {
     file.writeSynonyms(synonyms);
 
     console.log("New synonyms file written.");
@@ -60,15 +72,9 @@ inquirer.prompt(questions, function(result) {
 
         file.writeCodes(outputGraph);
 
-        var meta = {
-          version: pkg.version,
-          name: defaults.listname,
-          description: defaults.description,
-          author: defaults.name,
-          terminologies: defaults.terminologies,
-          synonyms: synonyms,
-          excludedCodes: outputGraph.excluded()
-        };
+        meta.synonyms = synonyms;
+        meta.excludedCodes = outputGraph.excluded();
+        meta.includedCodes = outputGraph.included();
 
         file.writeMetadata(meta);
 
