@@ -1,3 +1,6 @@
+/* jshint node: true */
+"use strict";
+
 var parse = require('csv-parse'),
   fs = require('fs'),
   path = require('path'),

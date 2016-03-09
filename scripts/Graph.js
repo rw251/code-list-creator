@@ -1,3 +1,6 @@
+/* jshint node: true */
+"use strict";
+
 require("./Array.js");
 
 var Graph = function() {
@@ -206,10 +209,6 @@ Graph.merge = function(graphs) {
   var g = new Graph();
   g.merge(graphs);
   return g;
-};
-
-var toMeta = function(graphs) {
-  //  var rtn =
 };
 
 module.exports = Graph;

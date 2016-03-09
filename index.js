@@ -1,10 +1,13 @@
+/* jshint node: true */
+"use strict";
+
 var util = require('util'),
   stream = require('stream'),
   es = require("event-stream"),
   inquirer = require('inquirer'),
-  db = require('./scripts/getFromSynonyms'),
+  main = require('./scripts/main.js'),
   Graph = require('./scripts/Graph.js'),
-  package = require('./package.json'),
+  pkg = require('./package.json'),
   file = require('./scripts/file.js'),
   q = require('./scripts/questions.js');
 
@@ -27,7 +30,7 @@ inquirer.prompt(questions, function(result) {
 
   file.setDefaults(defaults);
 
-  db.resultsAndProcess(synonyms, function(err, data) {
+  main.resultsAndProcess(synonyms, function(err, data) {
     file.writeSynonyms(synonyms);
 
     console.log("New synonyms file written.");
@@ -58,7 +61,7 @@ inquirer.prompt(questions, function(result) {
         file.writeCodes(outputGraph);
 
         var meta = {
-          version: package.version,
+          version: pkg.version,
           name: defaults.listname,
           description: defaults.description,
           author: defaults.name,

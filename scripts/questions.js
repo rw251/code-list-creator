@@ -1,3 +1,6 @@
+/* jshint node: true */
+"use strict";
+
 var inquirer = require('inquirer');
 
 module.exports = {

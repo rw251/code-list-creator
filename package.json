@@ -1,18 +1,19 @@
 {
-  "name": "drug-list",
+  "name": "code-list-creator",
   "version": "0.0.1",
   "description": "A reproducible method for constructing reusable code lists for clinical research.",
-  "main": "index.js",
+  "main": "scripts/main.js",
   "scripts": {
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
-    "start": "node main.js",
-    "debug": "node-debug main.js"
+    "start": "node index.js",
+    "debug": "node-debug index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:rw251/code-list-creator.git"
+    "url": "https://github.com/rw251/code-list-creator.git"
   },
-  "author": "Richard Williams",
+  "author": "Richard Williams <richard.williams2@manchester.ac.uk>",
+  "contributors" : [],
   "license": "MIT",
   "homepage": "https://github.com/rw251/code-list-creator",
   "dependencies": {

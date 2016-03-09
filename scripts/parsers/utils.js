@@ -1,3 +1,6 @@
+/* jshint node: true */
+"use strict";
+
 var transform = require('stream-transform');
 
 var getReadV2Parent = function(code) {

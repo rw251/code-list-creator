@@ -1,3 +1,6 @@
+/* jshint node: true */
+"use strict";
+
 var fs = require('fs'),
   util = require('util'),
   stream = require('stream'),
@@ -5,9 +8,8 @@ var fs = require('fs'),
   sqlite3 = require('sqlite3'),
   path = require('path');
 
-var db = new sqlite3.Database(path.join('db','dictionary.sqlite'));
-var files = [path.join('processed','Corev2.all.js.dict.txt'), path.join('processed','unidrug.rc.js.dict.txt')];
-var start;
+var start, s, db = new sqlite3.Database(path.join('db', 'dictionary.sqlite')),
+  files = [path.join('processed', 'Corev2.all.js.dict.txt'), path.join('processed', 'unidrug.rc.js.dict.txt')];
 
 db.serialize(function() {
   db.run('DROP TABLE IF EXISTS hierarchy');
@@ -48,15 +50,15 @@ db.serialize(function() {
           console.log('Read entirefile.');
         })
       );
-      if(file === files[files.length-1]){
-        db.run('CREATE INDEX hierParent ON hierarchy (parent)');
-        db.run('CREATE INDEX hierCode ON hierarchy (code)');
-      }
-      db.run("commit");
+    if (file === files[files.length - 1]) {
+      db.run('CREATE INDEX hierParent ON hierarchy (parent)');
+      db.run('CREATE INDEX hierCode ON hierarchy (code)');
+    }
+    db.run("commit");
   });
 });
 
 db.close(function() {
-    // sqlite3 has now fully committed the changes
-    console.log("Elapsed: "+(Date.now() - start) + "ms");
+  // sqlite3 has now fully committed the changes
+  console.log("Elapsed: " + (Date.now() - start) + "ms");
 });
