@@ -126,7 +126,7 @@ var processResults = function(graphs, callback) {
           name: "siblings",
           message: "Select sibling codes to include:",
           choices: checkboxes
-      }], childCheck); //TODO make this sibling check
+      }], childCheck);
       } else {
         childCheck({
           q: "y"
@@ -171,7 +171,7 @@ var processResults = function(graphs, callback) {
           name: "include",
           message: "Include parent code " + g.prop(v, "parent")[0] + "?",
           default: "y"
-        }], siblingCheck); //TODO make this sibling check
+        }], siblingCheck);
       } else {
         var checkboxes = g.prop(v, "parent").filter(function(val) {
           return !g.prop(val, "include");
@@ -187,7 +187,7 @@ var processResults = function(graphs, callback) {
           name: "parents",
           message: "Select parent codes to include:",
           choices: checkboxes
-        }], siblingCheck); //TODO make this sibling check
+        }], siblingCheck);
       }
     }
   };

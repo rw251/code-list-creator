@@ -5,6 +5,7 @@
   "main": "scripts/main.js",
   "scripts": {
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "test-0.10" : "node --harmony node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec",
     "start": "node index.js",
     "debug": "node-debug index.js"
   },
