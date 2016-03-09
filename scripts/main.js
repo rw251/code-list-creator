@@ -41,7 +41,7 @@ var processResults = function(graphs, callback) {
   var childCheck = function(val) {
     var allChildrenIncluded = g.getDescendents(v).reduce(function(prev, cur) {
       return prev && (g.prop(cur, "include") || g.prop(cur, "include") === false);
-    }, true); //not working for all children rejected??
+    }, true);
 
     if (val.siblings) {
       //val.siblings is a list of included siblings
@@ -142,7 +142,10 @@ var processResults = function(graphs, callback) {
     g.prop(v, "include", true);
     if (!val.include) {
       g.prop(v, "include", false);
-      if (g.prop(v, "children").length > 0) {
+      var allChildrenIncluded = g.getDescendents(v).reduce(function(prev, cur) {
+        return prev && (g.prop(cur, "include") || g.prop(cur, "include") === false);
+      }, true);
+      if (g.prop(v, "children").length > 0 && !allChildrenIncluded) {
         inquirer.prompt([{
           type: "checkbox",
           name: "include",
