@@ -7,9 +7,12 @@ node_js:
   - "0.10"
 script:
   nv=$(node -v);
+  echo $nv;
   if [[ $nv > '0.12' ]] ; then
+    echo "test";
     npm test;
   else
+    echo "0.10";
     npm run test-0.10;
   fi
 before_install:
