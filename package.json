@@ -5,7 +5,7 @@
   "main": "scripts/main.js",
   "scripts": {
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
-    "test-0.10" : "node --harmony node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec",
+    "test-0.10": "node --harmony node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec",
     "start": "node index.js",
     "debug": "node-debug index.js"
   },
@@ -14,11 +14,12 @@
     "url": "https://github.com/rw251/code-list-creator.git"
   },
   "author": "Richard Williams <richard.williams2@manchester.ac.uk>",
-  "contributors" : [],
+  "contributors": [],
   "license": "MIT",
   "homepage": "https://github.com/rw251/code-list-creator",
   "dependencies": {
     "colors": "1.x.x",
+    "commander": "2.9.x",
     "csv": "0.4.x",
     "csv-parse": "1.x.x",
     "event-stream": "3.x.x",

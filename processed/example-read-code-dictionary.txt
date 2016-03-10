@@ -1,0 +1,257 @@
+1....	History / symptoms	.....
+12...	Family history	1....
+12C..	FH: Cardiovascular disease	12...
+12C5.	FH: Myocardial infarction	12C..
+12CA.	FH myo inf male 1st deg age kn	12C..
+12CA.	FH myocardial infarction male first degree age known	12C..
+12CB.	FH myo inf mal 1st deg age ukn	12C..
+12CB.	FH myocardial infarction male first degree age unknown	12C..
+12CC.	FH myo inf fem 1st deg age kn	12C..
+12CC.	FH myocardial infarction female first degree age known	12C..
+12CD.	FH myo inf fem 1st deg age ukn	12C..
+12CD.	FH myocardial infarction female first degree age unknown	12C..
+12CN.	FH: MI 1st deg female rel <65	12C..
+12CN.	FH: Myocardial infarct in 1st degree female relative <65 yrs	12C..
+12CP.	FH: MI 1st deg male rel <55 yr	12C..
+12CP.	FH: Myocardial infarct in 1st degree male relative <55 years	12C..
+14A..	H/O: cardiovascular disease	14...
+14A3.	H/O: myocardial infarct <60	14A..
+14A4.	H/O: myocardial infarct >60	14A..
+14AH.	H/O: Myoc infarct in last year	14A..
+14AH.	H/O: Myocardial infarction in last year	14A..
+14AT.	H/O: myocardial infarction	14A..
+14AT.	History of myocardial infarction	14A..
+3....	Diagnostic procedures	.....
+32...	Electrocardiography	3....
+323..	ECG: myocardial infarction	32...
+3231.	ECG: no myocardial infarction	323..
+3232.	ECG: old myocardial infarction	323..
+3233.	ECG: antero-septal infarct.	323..
+3234.	ECG:posterior/inferior infarct	323..
+3235.	ECG: subendocardial infarct	323..
+3236.	ECG: lateral infarction	323..
+323Z.	ECG: myocardial infarct NOS	323..
+8....	Other therapeutic procedures	.....
+88...	Cardiovascular procedures	8....
+889..	Other blood stream additions	88...
+889A.	Diab mell ins gluc inf ac mi	889..
+889A.	Diab mellit insulin-glucose infus acute myocardial infarct	889..
+889A.	Diabetes mellitus insulin-glucose infusion in acute myocardial infarction	889..
+9....	Administration	.....
+9h...	Excep reprt: GP contr qual ind	9....
+9h...	Exception reporting: GP contract quality indicators	9....
+9hM..	Exc rep: MI quality indicators	9h...
+9hM..	Exception reporting: myocardial infarction quality indicator	9h...
+9hM..	Exception reporting: myocardial infarction quality indicators	9h...
+9hM0.	Exc MI quality ind: inform dis	9hM..
+9hM0.	Exc myocard infarction quality indicators: informed dissent	9hM..
+9hM0.	Excepted from myocardial infarction quality indicators: informed dissent	9hM..
+9hM1.	Exc MI quality ind: pat unsuit	9hM..
+9hM1.	Exc myocar infarction quality indicators: patient unsuitable	9hM..
+9hM1.	Excepted from myocardial infarction quality indicators: patient unsuitable	9hM..
+F....	Nervous system/sense organ dis	.....
+F....	Nervous system and sense organ diseases	.....
+F1...	Hereditary / degen.CNS disease	F....
+F1...	Hereditary and degenerative diseases of the CNS	F....
+F1...	Hereditary and degenerative diseases of the central nervous system	F....
+F16..	Other diseases of spinal cord	F1...
+F161.	Vascular myelopathies	F16..
+F1610	Myelopathy-infarct spine cord	F161.
+F1610	Myelopathy due to acute infarction of spinal cord	F161.
+G....	Circulatory system diseases	.....
+G3...	Ischaemic heart disease	G....
+G30..	Acute myocardial infarction	G3...
+G300.	Acute anterolateral infarction	G30..
+G301.	Anterior myocard. infarct OS	G30..
+G301.	Other specified anterior myocardial infarction	G30..
+G3010	Acute anteroapical infarction	G301.
+G3011	Acute anteroseptal infarction	G301.
+G301z	Anterior myocard.infarct NOS	G301.
+G301z	Anterior myocardial infarction NOS	G301.
+G302.	Acute inferolateral infarction	G30..
+G303.	Acute inferoposterior infarct	G30..
+G303.	Acute inferoposterior infarction	G30..
+G304.	Posterior myocard.infarct NOS	G30..
+G304.	Posterior myocardial infarction NOS	G30..
+G305.	Lateral myocardial infarct NOS	G30..
+G305.	Lateral myocardial infarction NOS	G30..
+G306.	True posterior myocard.infarct	G30..
+G306.	True posterior myocardial infarction	G30..
+G307.	Acute subendocardial infarct	G30..
+G307.	Acute subendocardial infarction	G30..
+G3070	Acute non-Q wave infarction	G307.
+G3071	Acute non-ST seg elevation mi	G307.
+G3071	Acute non-ST segment elevation myocardial infarction	G307.
+G308.	Inferior myocard. infarct NOS	G30..
+G308.	Inferior myocardial infarction NOS	G30..
+G309.	Acute Q-wave infarct	G30..
+G30A.	Mural thrombosis	G30..
+G30B.	Acute posterol myocard infarct	G30..
+G30B.	Acute posterolateral myocardial infarction	G30..
+G30X.	Ac transmur MI unspec site	G30..
+G30X.	Acute transmural myocardial infarction of unspecif site	G30..
+G30X.	Acute transmural myocardial infarction of unspecified site	G30..
+G30X0	Acute ST segment elevation mi	G30X.
+G30X0	Acute ST segment elevation myocardial infarction	G30X.
+G30y.	Other acute myocardial infarct	G30..
+G30y.	Other acute myocardial infarction	G30..
+G30y0	Acute atrial infarction	G30y.
+G30y1	Acute papillary muscle infarct	G30y.
+G30y1	Acute papillary muscle infarction	G30y.
+G30y2	Acute septal infarction	G30y.
+G30yz	Other acute myocardial inf.NOS	G30y.
+G30yz	Other acute myocardial infarction NOS	G30y.
+G30z.	Acute myocardial infarct. NOS	G30..
+G30z.	Acute myocardial infarction NOS	G30..
+G31..	Other acute/subacute IHD	G3...
+G31..	Other acute and subacute ischaemic heart disease	G3...
+G310.	Postmyocardial infarct. syndr.	G31..
+G310.	Postmyocardial infarction syndrome	G31..
+G311.	Preinfarction syndrome	G31..
+G3110	Myocardial infarction aborted	G311.
+G3111	Unstable angina	G311.
+G3112	Angina at rest	G311.
+G3113	Refractory angina	G311.
+G3114	Worsening angina	G311.
+G3115	Acute coronary syndrome	G311.
+G311z	Preinfarction syndrome NOS	G311.
+G312.	Coron thromb/not result in MI	G31..
+G312.	Coronary thrombosis not resulting in myocardial infarction	G31..
+G31y.	Other acute/subacute IHD	G31..
+G31y.	Other acute and subacute ischaemic heart disease	G31..
+G31y0	Acute coronary insufficiency	G31y.
+G31y1	Microinfarction of heart	G31y.
+G31y2	Subendocardial ischaemia	G31y.
+G31y3	Transient myocardial ischaemia	G31y.
+G31yz	Other acute/subacute IHD NOS	G31y.
+G31yz	Other acute and subacute ischaemic heart disease NOS	G31y.
+G32..	Old myocardial infarction	G3...
+G33..	Angina pectoris	G3...
+G330.	Angina decubitus	G33..
+G3300	Nocturnal angina	G330.
+G330z	Angina decubitus NOS	G330.
+G331.	Prinzmetal's angina	G33..
+G332.	Coronary artery spasm	G33..
+G33z.	Angina pectoris NOS	G33..
+G33z0	Status anginosus	G33z.
+G33z1	Stenocardia	G33z.
+G33z2	Syncope anginosa	G33z.
+G33z3	Angina on effort	G33z.
+G33z4	Ischaemic chest pain	G33z.
+G33z5	Post infarct angina	G33z.
+G33z6	New onset angina	G33z.
+G33z7	Stable angina	G33z.
+G33zz	Angina pectoris NOS	G33z.
+G34..	Other chr.ischaemic heart dis.	G3...
+G34..	Other chronic ischaemic heart disease	G3...
+G340.	Coronary atherosclerosis	G34..
+G3400	Single coronary vessel disease	G340.
+G3401	Double coronary vessel disease	G340.
+G341.	Aneurysm of heart	G34..
+G3410	Ventricular cardiac aneurysm	G341.
+G3411	Other cardiac wall aneurysm	G341.
+G3412	Aneurysm of coronary vessels	G341.
+G3413	Acquired A-V fistula of heart	G341.
+G3413	Acquired atrioventricular fistula of heart	G341.
+G341z	Aneurysm of heart NOS	G341.
+G342.	Atherosclerotic cardiovasc dis	G34..
+G342.	Atherosclerotic cardiovascular disease	G34..
+G343.	Ischaemic cardiomyopathy	G34..
+G344.	Silent myocardial ischaemia	G34..
+G34y.	Other specif. chronic IHD	G34..
+G34y.	Other specified chronic ischaemic heart disease	G34..
+G34y0	Chronic coronary insufficiency	G34y.
+G34y1	Chronic myocardial ischaemia	G34y.
+G34yz	Other specif.chronic IHD NOS	G34y.
+G34yz	Other specified chronic ischaemic heart disease NOS	G34y.
+G34z.	Other chronic IHD NOS	G34..
+G34z.	Other chronic ischaemic heart disease NOS	G34..
+G34z0	Asymptomatic CHD	G34z.
+G34z0	Asymptomatic coronary heart disease	G34z.
+G35..	Subseqnt myocardial infarction	G3...
+G35..	Subsequent myocardial infarction	G3...
+G350.	Subsqnt myocrd infarc/ant wall	G35..
+G350.	Subsequent myocardial infarction of anterior wall	G35..
+G351.	Subsqnt myocrd infarc/inf wall	G35..
+G351.	Subsequent myocardial infarction of inferior wall	G35..
+G353.	Subseq myo infarct other sites	G35..
+G353.	Subsequent myocardial infarction of other sites	G35..
+G35X.	Subseq MI of unspec site	G35..
+G35X.	Subsequent myocardial infarction of unspecified site	G35..
+G36..	Certain curnt comp fol acut MI	G3...
+G36..	Certain current complication follow acute myocardial infarct	G3...
+G36..	Certain current complications following acute myocardial infarction	G3...
+G360.	Haempericrd/cur comp fol ac MI	G36..
+G360.	Haemopericardium/current comp folow acut myocard infarct	G36..
+G360.	Haemopericardium as current complication following acute myocardial infarction	G36..
+G361.	Atrl sept def/c comp fol ac MI	G36..
+G361.	Atrial septal defect/curr comp folow acut myocardal infarct	G36..
+G361.	Atrial septal defect as current complication following acute myocardial infarction	G36..
+G362.	Vent sep def/c comp fol ac MI	G36..
+G362.	Ventric septal defect/curr comp fol acut myocardal infarctn	G36..
+G362.	Ventricular septal defect as current complication following acute myocardial infarction	G36..
+G363.	Rup cd w w't h'mpc/cmp f ac MI	G36..
+G363.	Ruptur cardiac wall w'out haemopericard/cur comp fol ac MI	G36..
+G363.	Rupture of cardiac wall without haemopericardium as current complication following acute myocardial infarction	G36..
+G364.	Rp chord tend/c cmp fol ac MI	G36..
+G364.	Ruptur chordae tendinae/curr comp fol acute myocard infarct	G36..
+G364.	Rupture of chordae tendinae as current complication following acute myocardial infarction	G36..
+G365.	Rp papilr musc/c cmp fol ac MI	G36..
+G365.	Rupture papillary muscle/curr comp fol acute myocard infarct	G36..
+G365.	Rupture of papillary muscle as current complication following acute myocardial infarction	G36..
+G366.	Thrm/atr,au ap&vnt/c cp f a MI	G36..
+G366.	Thrombosis atrium,auric append&vent/curr comp foll acute MI	G36..
+G366.	Thrombosis of atrium, auricular appendage, and ventricle as current complications following acute myocardial infarction	G36..
+G37..	Cardiac syndrome X	G3...
+G38..	Postoperative MI	G3...
+G38..	Postoperative myocardial infarction	G3...
+G380.	Postop transmur MI inf wall	G38..
+G380.	Postoperative transmural myocardial infarction anterior wall	G38..
+G380.	Postoperative transmural myocardial infarction of anterior wall	G38..
+G381.	Postop transm MI inferior wall	G38..
+G381.	Postoperative transmural myocardial infarction inferior wall	G38..
+G381.	Postoperative transmural myocardial infarction of inferior wall	G38..
+G382.	Postop transm MI other sites	G38..
+G382.	Postoperative transmural myocardial infarction other sites	G38..
+G382.	Postoperative transmural myocardial infarction of other sites	G38..
+G383.	Postop transm MI unspec site	G38..
+G383.	Postoperative transmural myocardial infarction unspec site	G38..
+G383.	Postoperative transmural myocardial infarction of unspecified site	G38..
+G384.	Postop subendocardial MI	G38..
+G384.	Postoperative subendocardial myocardial infarction	G38..
+G38z.	Postop MI,unspec	G38..
+G38z.	Postoperative myocardial infarction, unspecified	G38..
+G39..	Coronary microvascular disease	G3...
+G3y..	Ischaemic heart disease OS	G3...
+G3y..	Other specified ischaemic heart disease	G3...
+G3z..	Ischaemic heart disease NOS	G3...
+Gy...	Circulatory system dis.OS	G....
+Gy...	Other specified diseases of circulatory system	G....
+Gyu..	[X]Ad circul sys dis clssf trm	Gy...
+Gyu..	[X]Additional circulatory system disease classificatn terms	Gy...
+Gyu..	[X]Additional circulatory system disease classification terms	Gy...
+Gyu3.	[X]Ischaemic heart diseases	Gyu..
+Gyu31	[X]Oth currnt comp follw ac MI	Gyu3.
+Gyu31	[X]Other current complicatns following acute myocard infarct	Gyu3.
+Gyu31	[X]Other current complications following acute myocardial infarction	Gyu3.
+Gyu32	[X]Oth form/ac ischaem hrt dis	Gyu3.
+Gyu32	[X]Other forms of acute ischaemic heart disease	Gyu3.
+Gyu33	[X]O form/chron ischmc hrt dis	Gyu3.
+Gyu33	[X]Other forms of chronic ischaemic heart disease	Gyu3.
+Gyu34	[X]Ac transmur MI unspec site	Gyu3.
+Gyu34	[X]Acute transmural myocardial infarction of unspecif site	Gyu3.
+Gyu34	[X]Acute transmural myocardial infarction of unspecified site	Gyu3.
+Gyu35	[X]Subseq myocard inf oth site	Gyu3.
+Gyu35	[X]Subsequent myocardial infarction of other sites	Gyu3.
+Gyu36	[X]Subseq MI of unspec site	Gyu3.
+Gyu36	[X]Subsequent myocardial infarction of unspecified site	Gyu3.
+Z....	Unspecified conditions	.....
+ZV...	[V]Health Serv.contact factors	Z....
+ZV...	[V]Health status and contact with health services factors	Z....
+ZV...	[V]Factors influencing health status and contact with health services	Z....
+ZV7..	[V]Well-pers. exam/test/screen	ZV...
+ZV7..	[V]Well persons examination, investigation and screening	ZV...
+ZV71.	[V]Suspected condition observ.	ZV7..
+ZV71.	[V]Observation and evaluation for suspected conditions	ZV7..
+ZV719	[V]Obs/suspct myocard infarctn	ZV71.
+ZV719	[V]Observation for suspected myocardial infarction	ZV71.

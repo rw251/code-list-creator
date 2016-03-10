@@ -1,16 +1,42 @@
 # Clinical code list creator
+
 [![travis][travis-image]][travis-url]
 [![david-dm][david-dm-image]][david-dm-url]
 [![codecov][codecov-image]][codecov-url]
 [![bitHound][bithound-image]][bithound-url]
+
+  A cross platform command line tool for creating lists of clinical codes.
+
+# Pre-requisites
+1. Install [node.js](https://nodejs.org) >= 0.10.0
+2. Install [git](https://git-scm.com/)
+
+# Quick start
+1. Open a command line prompt and clone this repository
+```
+git clone https://github.com/rw251/code-list-creator.git
+```
+2. Navigate into the newly created directory
+```
+cd code-list-creator
+```
+3. Install the dependencies
+```
+npm install
+```
+4. Create the database from the sample code dictionary
+```
+node index.js --process
+```
 
 # Use cases
 
 1. User just wants a link to a list of codes
 2. afsd
 
-# Pre-requisites
-node.js >= 0.10.0
+
+
+
 
 [travis-url]: https://travis-ci.org/rw251/code-list-creator
 [travis-image]: https://travis-ci.org/rw251/code-list-creator.svg?branch=master

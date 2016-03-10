@@ -3,6 +3,8 @@ coverage/
 out/
 in/
 dicts/
-processed/
+processed/*
 .defaults.json
 *.sqlite
+
+!processed/example-read-code-dictionary.txt
