@@ -1,6 +1,6 @@
 {
   "name": "code-list-creator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A reproducible method for constructing reusable code lists for clinical research.",
   "main": "scripts/main.js",
   "scripts": {
