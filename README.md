@@ -42,11 +42,11 @@ The following shows how to get up and running quickly using an example dictionar
 
         node index.js --process
 
-5. Start creating a code list (hint - the sample code dictionary contains codes relating to acute myocardial infarction)
+5. Start creating a code list (hint - the sample code dictionary contains codes relating to acute myocardial infarction so try specifying 'myocardial infarction' when prompted for synonyms)
 
         node index.js
 
-6. Follow on screen instructions. Ultimately two files will be createed in the out/ directory:
+6. Follow on screen instructions. Ultimately two files will be created in the out/ directory:
   - codes.txt - the raw list of codes selected
   - meta.json - the associated metadata
 

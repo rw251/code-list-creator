@@ -61,11 +61,12 @@ if (program.process) {
 
       main.resultsAndProcess(meta, function(err, data) {
 
-        console.log("New synonyms file written.");
         if (err) {
           console.log(err);
           return;
         }
+
+        if(data.length===0) console.log("No matching terms found in the dictionary");
 
         var g, output = [];
         var input = function(val) {
@@ -87,12 +88,14 @@ if (program.process) {
             var outputGraph = Graph.merge(output);
 
             file.writeCodes(outputGraph);
+            console.log("Code list written to out/codes.txt");
 
             meta.synonyms = synonyms;
             meta.excludedCodes = outputGraph.excluded();
             meta.includedCodes = outputGraph.included();
 
             file.writeMetadata(meta);
+            console.log("Metadata written to out/meta.json");
 
             process.exit(0);
           }
