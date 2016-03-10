@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
-  "name": "Acute MI",
-  "description": "Acute myocardial infarction",
+  "name": "Acute myocardial infarction (AMI)",
+  "description": "An acute myocardial infarction, excluding post-operative and subsequent MI",
   "author": "Richard Williams",
   "terminologies": [
     "ReadV2"
