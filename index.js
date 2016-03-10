@@ -12,11 +12,9 @@ var util = require('util'),
   q = require('./scripts/questions.js');
 
 var meta = process.argv.length>2 ? file.loadMetadata(process.argv[2]) : {};
-console.dir(meta);
 
 // Read synonyms from file
 var synonyms = Object.keys(meta).length > 0 ? meta.synonyms : file.getSynonyms();
-console.dir(synonyms);
 
 // Read defaults from file
 var defaults = file.getDefaults();
@@ -43,7 +41,6 @@ inquirer.prompt(questions, function(result) {
   file.setDefaults(defaults);
 
   main.resultsAndProcess(meta, function(err, data) {
-    file.writeSynonyms(synonyms);
 
     console.log("New synonyms file written.");
     if (err) {

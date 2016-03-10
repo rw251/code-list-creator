@@ -1,0 +1,45 @@
+{
+  "version": "0.0.1",
+  "name": "Clopidogrel",
+  "description": "All medications containing the active ingredient clopidogrel",
+  "author": "Richard Williams",
+  "terminologies": [
+    "ReadV2"
+  ],
+  "synonyms": [
+    "clopidogrel",
+    "plavix",
+    "grepid"
+  ],
+  "excludedCodes": [
+    "bu...",
+    "ZV14B",
+    "ZV14.",
+    "U6048",
+    "U604.",
+    "8I72.",
+    "8I7..",
+    "8I6B.",
+    "8I6..",
+    "8I3R.",
+    "8I3..",
+    "8I2K.",
+    "8I2..",
+    "8BG9.",
+    "8BG..",
+    "8B6P.",
+    "8B6P0",
+    "8B6P1",
+    "8B6..",
+    "14LQ.",
+    "14L.."
+  ],
+  "includedCodes": [
+    "bu5..",
+    "bu51.",
+    "bu52.",
+    "bu53.",
+    "bu54.",
+    "bu55."
+  ]
+}
