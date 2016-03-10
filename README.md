@@ -28,6 +28,13 @@ npm install
 ```
 node index.js --process
 ```
+5. Start creating a code list (hint - the sample code dictionary contains codes relating to acute myocardial infarction)
+```
+node index.js
+```
+
+# Command line options
+
 
 # Use cases
 

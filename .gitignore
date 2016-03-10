@@ -2,7 +2,7 @@ node_modules/
 coverage/
 out/
 in/
-dicts/
+dicts/*
 processed/*
 .defaults.json
 *.sqlite
