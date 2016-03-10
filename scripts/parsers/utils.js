@@ -19,7 +19,7 @@ var transformer = transform(function(data, callback) {
   });
 }, { parallel: 20 });
 
-transformer.on('readable', function() {
+transformer.on('readable', function(row) {
   while ((row = transformer.read()) !== null) {
     return row;
   }
@@ -31,8 +31,6 @@ transformer.on('error', function(err) {
 
 module.exports = {
 
-  transformer: transformer,
-  input: input,
-  output: output
+  transformer: transformer
 
 };
