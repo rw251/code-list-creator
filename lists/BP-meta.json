@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "Blood pressure reading (BP)",
   "description": "A blood pressure reading - both systolic and diastolic. Include codes with associated values (e.g. SBP=180mmHg), and those that are descriptive (BP normal)",
   "author": "Richard Williams",
