@@ -23,22 +23,6 @@ module.exports = {
     fs.writeFileSync(file, JSON.stringify(defaults, null, 2));
   },
 
-  getSynonyms: function(file) {
-    if (!file) file = path.join('in', 'synonyms.txt');
-    try {
-      return fs.readFileSync(file).toString().replace(/\r\n/g, '\n').split('\n').filter(function(el) {
-        return el.search(/^\s*$/) === -1;
-      });
-    } catch(e) {
-      return [];
-    }
-  },
-
-  writeSynonyms: function(synonyms, file) {
-    if (!file) file = path.join('out', 'synonyms.txt');
-    fs.writeFileSync(file, synonyms.join("\n"));
-  },
-
   writeCodes: function(outputGraph, file) {
     if (!file) file = path.join('out', 'codes.txt');
     fs.writeFileSync(file, outputGraph.included().join("\n"));

@@ -25,13 +25,4 @@ describe('file', function() {
     });
   });
 
-  it("reads and writes synonyms", function() {
-    expect(file.getSynonyms(SYNONYM_FILE)).to.be.a("array").with.length(0);
-
-    file.writeSynonyms(["red", "crimson"], SYNONYM_FILE);
-
-    expect(file.getSynonyms(SYNONYM_FILE)).to.be.a("array").with.length(2).and.to.include("red");
-
-    fs.unlinkSync(SYNONYM_FILE);
-  });
 });
