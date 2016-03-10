@@ -13,25 +13,25 @@
 
 # Quick start
 1. Open a command line prompt and clone this repository
-```
-git clone https://github.com/rw251/code-list-creator.git
-```
+
+        git clone https://github.com/rw251/code-list-creator.git
+
 2. Navigate into the newly created directory
-```
-cd code-list-creator
-```
+
+        cd code-list-creator
+
 3. Install the dependencies
-```
-npm install
-```
+
+        npm install
+
 4. Create the database from the sample code dictionary
-```
-node index.js --process
-```
+
+        node index.js --process
+
 5. Start creating a code list (hint - the sample code dictionary contains codes relating to acute myocardial infarction)
-```
-node index.js
-```
+
+        node index.js
+
 
 # Command line options
 

@@ -1,6 +1,5 @@
 node_modules/
 coverage/
-out/
 in/
 dicts/*
 processed/*
