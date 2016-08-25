@@ -4,7 +4,9 @@
 var inquirer = require('inquirer'),
   Graph = require('./Graph.js'),
   db = require('./db.js'),
-  colors = require('colors');
+  colors = require('colors'),
+  total = 0,
+  progress = 0;
 
 var processResults = function(graphs, callback) {
   var i = 0,
@@ -82,7 +84,7 @@ var processResults = function(graphs, callback) {
   var rejectCheck = function(val) {
     //reject parents unless already included
     g.prop(v, "parent").forEach(function(p) {
-      if(!g.prop(p,"include")) g.prop(p, "include", false);
+      if (!g.prop(p, "include")) g.prop(p, "include", false);
     });
     //reject children
     g.getDescendents(v).forEach(function(p) {
@@ -116,7 +118,7 @@ var processResults = function(graphs, callback) {
       if (unmatchedSiblings && unmatchedSiblings.length > 0) {
         var checkboxes = unmatchedSiblings.map(function(val) {
           return {
-            "value": {code: val, description: siblings[val]},
+            "value": { code: val, description: siblings[val] },
             "name": val + ": " + siblings[val].join(" | "),
             "short": val
           };
@@ -207,6 +209,7 @@ var processResults = function(graphs, callback) {
       i++;
       next();
     } else {
+      progress++;
       if (j === 0) {
         //Load next graph
         g = graphs[i];
@@ -214,7 +217,7 @@ var processResults = function(graphs, callback) {
       }
 
       v = orderedNodes[j];
-      var status;
+      var status, progressText;
       console.log("");
       console.log("");
       for (k = 0; k < g.prop(v, "parent").length; k++) {
@@ -226,7 +229,8 @@ var processResults = function(graphs, callback) {
       console.log("|".white);
       status = g.prop(v, "include") ? "  INCLUDED".cyan : "";
       if (g.prop(v, "include") === false) status = "  REJECTED".red;
-      console.log("+--".white + " CODE: ".green + v + "-" + g.prop(v, "description").join(" | ").green + status);
+      progressText = " (code " + (progress+"").yellow + " of " + (total + "").green + ") ";
+      console.log("+--".white + " CODE: ".green + v + "-" + g.prop(v, "description").join(" | ").green + progressText + status);
 
       g.displayChildrenInTree(v);
 
@@ -245,6 +249,10 @@ var processResults = function(graphs, callback) {
       }
     }
   };
+  graphs.forEach(function(v) {
+    g = v;
+    total += g.nodes().filter(removeLeaves).length;
+  });
 
   next();
 };
