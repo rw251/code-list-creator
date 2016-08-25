@@ -9,10 +9,10 @@ var sqlite3 = require('sqlite3'),
   stream = require('stream'),
   es = require("event-stream");
 
-module.exports = {
-  getFromSynonyms: function(meta, callback) {
+var dbObj = {
+  getFromSynonyms: function(meta, dbName, callback) {
     var graph = new Graph(),
-      db = new sqlite3.Database(path.join('db', 'dictionary.sqlite')),
+      db = new sqlite3.Database(path.join('db', dbName)),
       errors=[];
 
     db.serialize(function() {
@@ -131,16 +131,34 @@ module.exports = {
     });
   },
 
-  processDictionaryFiles: function(callback) {
-    var start, s, db = new sqlite3.Database(path.join('db', 'dictionary.sqlite')),
-      files = fs.readdirSync('processed');// [path.join('processed', 'Corev2.all.js.dict.txt'), path.join('processed', 'unidrug.rc.js.dict.txt')];
-
+  create: function(name, testCallback){
+    var db = new sqlite3.Database(path.join('db', name));
     db.serialize(function() {
       db.run('DROP TABLE IF EXISTS hierarchy');
       db.run('CREATE TABLE hierarchy (code VARCHAR, description VARCHAR, parent VARCHAR)');
 
       db.run('DROP TABLE IF EXISTS dictionary');
       db.run('CREATE VIRTUAL TABLE dictionary USING fts4(code VARCHAR, description VARCHAR)');
+    });
+
+    if(testCallback){
+      db.close(function() {
+        // sqlite3 has now fully committed the changes
+        return testCallback();
+      });
+    }
+  },
+
+  destroy: function(name){
+    fs.unlink(path.join('db', name));
+  },
+
+  processDictionaryFiles: function(callback) {
+    var start, s, name = 'dictionary.sqlite', db = new sqlite3.Database(path.join('db', name)),
+      files = fs.readdirSync('processed');// [path.join('processed', 'Corev2.all.js.dict.txt'), path.join('processed', 'unidrug.rc.js.dict.txt')];
+
+    db.serialize(function() {
+      dbObj.create(name);
 
       start = Date.now();
       files.forEach(function(file) {
@@ -190,3 +208,5 @@ module.exports = {
   }
 
 };
+
+module.exports = dbObj;

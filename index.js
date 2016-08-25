@@ -86,16 +86,17 @@ if (program.process) {
         var done = function() {
           if (data.length === 0) {
             var outputGraph = Graph.merge(output);
+            var timestamp = (new Date()).toISOString().substr(0,19).replace(/[:]/g,"-").replace(/[T]/g,"_");
 
-            file.writeCodes(outputGraph);
-            console.log("Code list written to out/codes.txt");
+            var o1 = file.writeCodes(outputGraph, "codes_" + timestamp + (meta.name ? "_"+meta.name : "") + ".txt");
+            console.log("Code list written to " + o1);
 
             meta.synonyms = synonyms;
             meta.excludedCodes = outputGraph.excluded();
             meta.includedCodes = outputGraph.included();
 
-            file.writeMetadata(meta);
-            console.log("Metadata written to out/meta.json");
+            var o2 = file.writeMetadata(meta, "meta_" + timestamp + (meta.name ? "_"+meta.name : "") + ".json");
+            console.log("Code list written to " + o2);
 
             process.exit(0);
           }

@@ -311,7 +311,7 @@ var validateResults = function(graph, synonyms, callback) {
 };
 
 var resultsAndProcess = function(meta, callback) {
-  db.getFromSynonyms(meta, function(err, graphs) {
+  db.getFromSynonyms(meta, 'dictionary.sqlite', function(err, graphs) {
     if (err) {
       return callback(err);
     }

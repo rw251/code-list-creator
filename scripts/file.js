@@ -23,18 +23,22 @@ module.exports = {
     fs.writeFileSync(file, JSON.stringify(defaults, null, 2));
   },
 
-  writeCodes: function(outputGraph, file) {
-    if (!file) file = path.join('out', 'codes.txt');
+  writeCodes: function(outputGraph, filename) {
+    filename = filename.replace(/[^a-zA-Z0-9 \-_\.]/g," ");
+    var file = path.join('out', filename);
     fs.writeFileSync(file, outputGraph.included().join("\n"));
+    return filename;
   },
 
   loadMetadata: function(file){
     return JSON.parse(fs.readFileSync(file).toString());
   },
 
-  writeMetadata: function(metadata, file) {
-    if (!file) file = path.join('out', 'meta.json');
+  writeMetadata: function(metadata, filename) {
+    filename = filename.replace(/[^a-zA-Z0-9 \-_\.]/g," ");
+    var file = path.join('out', filename);
     fs.writeFileSync(file, JSON.stringify(metadata, null, 2));
+    return filename;
   }
 
 };
