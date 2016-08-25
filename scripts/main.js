@@ -141,8 +141,11 @@ var processResults = function(graphs, callback) {
     var allParentsIncluded = g.prop(v, "parent").reduce(function(prev, cur) {
       return prev && (g.prop(cur, "include") || g.prop(cur, "include") === false);
     }, true);
+    if (val.include === "b") {
+      return back();
+    }
     g.prop(v, "include", true);
-    if (!val.include) {
+    if (val.include==="n") {
       g.prop(v, "include", false);
       var allChildrenIncluded = g.getDescendents(v).reduce(function(prev, cur) {
         return prev && (g.prop(cur, "include") || g.prop(cur, "include") === false);
@@ -197,6 +200,29 @@ var processResults = function(graphs, callback) {
     }
   };
 
+  //Go back to previous code
+  var back = function() {
+    if (j === 0) {
+      if (i === 0) {
+        progress--;
+        next();
+      } else {
+        i--;
+        g = graphs[i];
+        orderedNodes = g.nodes().sort(sortByDepth).filter(removeLeaves);
+        j = orderedNodes.length - 1;
+        g.propDelete(orderedNodes[j], "include");
+        progress-=2;
+        next();
+      }
+    } else {
+      j--;
+      g.propDelete(orderedNodes[j], "include");
+      progress-=2;
+      next();
+    }
+  };
+
   //Process the next code.
   var next = function() {
     if (i > graphs.length - 1) {
@@ -229,7 +255,7 @@ var processResults = function(graphs, callback) {
       console.log("|".white);
       status = g.prop(v, "include") ? "  INCLUDED".cyan : "";
       if (g.prop(v, "include") === false) status = "  REJECTED".red;
-      progressText = " (code " + (progress+"").yellow + " of " + (total + "").green + ") ";
+      progressText = " (code " + (progress + "").yellow + " of " + (total + "").green + ") ";
       console.log("+--".white + " CODE: ".green + v + "-" + g.prop(v, "description").join(" | ").green + progressText + status);
 
       g.displayChildrenInTree(v);
@@ -237,14 +263,19 @@ var processResults = function(graphs, callback) {
       console.log("");
       if (!g.prop(v, "include") && g.prop(v, "include") !== false) {
         inquirer.prompt([{
-          type: "confirm",
+          type: "input",
           name: "include",
-          message: "Include " + v + "?",
-          default: "y"
+          message: "Include " + v + "? [y]es,[n]o,[b]ack",
+          default: "y",
+          validate: function(input) {
+            var validAnswers = ["y", "n", "b"];
+            if (validAnswers.indexOf(input) > -1) return true;
+            else return "Please enter one of " + validAnswers.join("/");
+          }
         }], parentCheck);
       } else {
         parentCheck({
-          "include": g.prop(v, "include")
+          "include": g.prop(v, "include") ? "y" : "n"
         });
       }
     }
