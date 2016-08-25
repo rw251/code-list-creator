@@ -12,14 +12,19 @@ var sqlite3 = require('sqlite3'),
 module.exports = {
   getFromSynonyms: function(meta, callback) {
     var graph = new Graph(),
-      db = new sqlite3.Database(path.join('db', 'dictionary.sqlite'));
+      db = new sqlite3.Database(path.join('db', 'dictionary.sqlite')),
+      errors=[];
 
     db.serialize(function() {
       var simpleSynonyms = meta.synonyms.filter(function(val) {
         return val.indexOf('*') === -1 && val.indexOf(' ') === -1;
+      }).map(function(val){
+        return val.replace(/'/g, "''");
       });
       var wildcardSynonyms = meta.synonyms.filter(function(val) {
         return val.indexOf('*') > -1 || val.indexOf(' ') > -1;
+      }).map(function(val){
+        return val.replace(/'/g, "''");
       });
       db.each(["WITH RECURSIVE ",
                "  child_of_code(n) AS ( ",
@@ -36,7 +41,8 @@ module.exports = {
         function(err, row) {
           //Each time we get a result back
           if (err) {
-            return callback(err);
+            errors.push(err);
+            return;
           }
           graph.addNode(row.code);
           graph.addNode(row.parent);
@@ -65,6 +71,9 @@ module.exports = {
       // sqlite3 has now fully committed the changes
       // Now we split the graph into subgraphs of connected components
       // - each one can then be processed in isolation
+      if(errors.length>0){
+        return callback(errors);
+      }
 
       var graphs = graph.connectedSubgraphs();
       graphs.forEach(function(g) {

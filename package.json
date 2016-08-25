@@ -25,6 +25,8 @@
     "event-stream": "3.x.x",
     "fs": "0.x.x",
     "inquirer": "0.12.x",
+    "jsonfile": "^2.3.1",
+    "lunr": "^0.7.1",
     "prompt": "1.x.x",
     "sqlite3": "3.1.x",
     "stream-transform": "0.1.x"
