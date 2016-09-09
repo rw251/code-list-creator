@@ -36,7 +36,7 @@ describe('db', function() {
         else {
           //get list of nodes from graph
           var nodes = val[0].nodes();
-          var descriptions = nodes.map(function(v){
+          var descriptions = nodes.map(function(v) {
             return val[0].node(v).description.join("|");
           }).join("|");
           expect(descriptions).to.contain('co-pilot');
