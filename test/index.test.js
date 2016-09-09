@@ -8,7 +8,9 @@ describe('db', function() {
   before(function(done) {
     // runs before all tests in this block
     db.create('testdb', function() {
-      done();
+      db.processDictionaryFiles('testdb', 'test/testdb', function() {
+        done();
+      });
     });
   });
 
@@ -27,11 +29,26 @@ describe('db', function() {
         else done();
       });
     });
+
+    it("should not treat hypenated words as negators", function(done) {
+      db.getFromSynonyms({ synonyms: ["co-pilot"] }, 'testdb', function(err, val) {
+        if (err) done(err);
+        else {
+          //get list of nodes from graph
+          var nodes = val[0].nodes();
+          var descriptions = nodes.map(function(v){
+            return val[0].node(v).description.join("|");
+          }).join("|");
+          expect(descriptions).to.contain('co-pilot');
+          done();
+        }
+      });
+    });
   });
 
   after(function() {
     // runs before all tests in this block
-    db.destroy('testdb');
+    //db.destroy('testdb');
   });
 
 });

@@ -19,6 +19,7 @@ var dbObj = {
       var simpleSynonyms = meta.synonyms.filter(function(val) {
         return val.indexOf('*') === -1 && val.indexOf(' ') === -1;
       }).map(function(val){
+        if(val.indexOf("-")>-1) val = "\""+val+"\"";
         return val.replace(/'/g, "''");
       });
       var wildcardSynonyms = meta.synonyms.filter(function(val) {
@@ -67,7 +68,8 @@ var dbObj = {
         });
     });
 
-    db.close(function() {
+    db.close(function(err) {
+      if(err) throw err;
       // sqlite3 has now fully committed the changes
       // Now we split the graph into subgraphs of connected components
       // - each one can then be processed in isolation
@@ -101,7 +103,8 @@ var dbObj = {
         });
     });
 
-    db.close(function() {
+    db.close(function(err) {
+      if(err) return callback(err);
       callback(null, siblings);
     });
   },
@@ -125,7 +128,8 @@ var dbObj = {
       });
     });
 
-    db.close(function() {
+    db.close(function(err) {
+      if(err) return callback(err);
       // sqlite3 has now fully committed the changes
       callback(null, terms);
     });
@@ -142,7 +146,8 @@ var dbObj = {
     });
 
     if(testCallback){
-      db.close(function() {
+      db.close(function(err) {
+        if(err) throw err;
         // sqlite3 has now fully committed the changes
         return testCallback();
       });
@@ -153,9 +158,9 @@ var dbObj = {
     fs.unlink(path.join('db', name));
   },
 
-  processDictionaryFiles: function(callback) {
-    var start, s, name = 'dictionary.sqlite', db = new sqlite3.Database(path.join('db', name)),
-      files = fs.readdirSync('processed');// [path.join('processed', 'Corev2.all.js.dict.txt'), path.join('processed', 'unidrug.rc.js.dict.txt')];
+  processDictionaryFiles: function(name, directory, callback) {
+    var start, s, db = new sqlite3.Database(path.join('db', name)),
+      files = fs.readdirSync(directory);// [path.join('processed', 'Corev2.all.js.dict.txt'), path.join('processed', 'unidrug.rc.js.dict.txt')];
 
     db.serialize(function() {
       dbObj.create(name);
@@ -166,7 +171,7 @@ var dbObj = {
         var stmt = db.prepare("INSERT OR IGNORE INTO dictionary (code, description) VALUES (?,?)");
         var stmt2 = db.prepare("INSERT OR IGNORE INTO hierarchy (code, description, parent) VALUES (?,?,?)");
 
-        s = fs.createReadStream(path.join('processed', file))
+        s = fs.createReadStream(path.join(directory, file))
           .pipe(es.split())
           .pipe(es.mapSync(function(line) {
 
@@ -200,7 +205,8 @@ var dbObj = {
       });
     });
 
-    db.close(function() {
+    db.close(function(err) {
+      if(err) return callback(err);
       // sqlite3 has now fully committed the changes
       console.log("Elapsed: " + (Date.now() - start) + "ms");
       return callback(null);

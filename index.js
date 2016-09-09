@@ -21,7 +21,7 @@ program
 
 if (program.process) {
   //Process dictionary files
-  db.processDictionaryFiles(function(err) {
+  db.processDictionaryFiles('dictionary.sqlite', 'processed', function(err) {
     if (err) {
       console.log(err);
       process.exit(1);
